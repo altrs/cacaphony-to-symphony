@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body{
+            margin: 30px;
+        }
+        .container {
+            display: flex;
+        }
+
+        .box {
+            width: 50%;
+            border: 1px solid #000;
+            padding: 50px;
+            margin: 10px;
+            height: 250px;
+        }
+
+        .read-more-content1 {
+            display: none;
+        }
+
+        .read-more-content2 {
+            display: none;
+        }
+
+        .read-more-button1:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .read-more-button2:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            transform: rotate(45deg);
+        }
+
+        .read-more-button2 {
+            color: red;
+        }
+
+        .rotate-icon {
+            transition: transform 0.3s; /* Add a transition for smooth rotation */
+        }
+
+        .read-more-button2:hover .rotate-icon {
+            transform: rotate(90deg);
+        }
+
+        .secondDiv{
+            margin: 50px;
+            margin-left: 300px;
+            margin-right: 300px;
+        }
+
+        .sound1{
+            color: #8ca8bf;
+        }
+
+        .sound1:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio id="hover-sound" src="test.wav"></audio>
+
+    <br><h1 style="text-align: center;">Testing Information Delivery</h1><br>
+
+    <div class="container">
+        <div class="box">
+            <p>
+                <span class="read-more-button1" onclick="toggleReadMore1()">While systems already in place (such as SONYC, ACOEM, and Nonoise.org) are extremely advanced, they almost solely focus only on the collection of the data, leaving the rest up to the DEP.</span>
+            </p>
+            <div class="read-more-content1">
+                <p>
+                    SONYC, ACOEM, and Nonoise.org, all share the common strength of being able to accurately record real time data of noise levels. However, taking these systems into consideration, they still have a ways to go in order to fully mitigate noise regulation. For all these systems, it seems that they still look to NYC’s Department of Environmental Protection (DEP) to handle the situation past the point of information gathering. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <p> While systems already in place (such as SONYC, ACOEM, and Nonoise.org) are extremely advanced, they almost solely focus only on the collection of the data, leaving the rest up to the DEP <span class="read-more-button2" onclick="toggleReadMore2()">+</span>
+            </p>
+            <div class="read-more-content2">
+                <p>
+                    SONYC, ACOEM, and Nonoise.org, all share the common strength of being able to accurately record real time data of noise levels. However, taking these systems into consideration, they still have a ways to go in order to fully mitigate noise regulation. For all these systems, it seems that they still look to NYC’s Department of Environmental Protection (DEP) to handle the situation past the point of information gathering. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="secondDiv"> In the case of an organization/company, such as <span class="sound1" onmouseover="playHoverSound()" onmouseout="stopHoverSound()">a construction site making excessive noise</span>, “the [AI] system can alert the contractor and suggest ways to reduce the noise. This could include using quieter equipment or scheduling construction during off-peak hours.” Overall, giving citizens the ability to access this information easily can help raise awareness of harmful noise levels around them and empower them with knowledge. Accessible, real-time data is the first step towards equipped citizens to have more control over their environment – and subsequently, their own well being.</div>
+
+     <script>
+
+        var hoverSound = document.getElementById("hover-sound");
+
+        function playHoverSound() {
+            hoverSound.play();
+        }
+
+        function stopHoverSound() {
+            hoverSound.pause();
+            hoverSound.currentTime = 0;
+        }
+
+        function toggleReadMore1() {
+            var readMoreContent1 = document.querySelector(".read-more-content1");
+            if (readMoreContent1.style.display === "none" || readMoreContent1.style.display === "") {
+                readMoreContent1.style.display = "block";
+            } else {
+                readMoreContent1.style.display = "none";
+            }
+        }
+
+        function toggleReadMore2() {
+            var readMoreContent2 = document.querySelector(".read-more-content2");
+            var readMoreButton2 = document.querySelector(".read-more-button2");
+            if (readMoreContent2.style.display === "none" || readMoreContent2.style.display === "") {
+                readMoreContent2.style.display = "block";
+                readMoreButton2.innerHTML = "-";
+            } else {
+                readMoreContent2.style.display = "none";
+                readMoreButton2.innerHTML = "+";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.intro {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+    background-color: grey;
+    font-family: 'Arial';
+}
+
+.container {  
+	display: grid;
+	height: 900px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 20%;
+	margin-right: 20%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 0px 10px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"t1 b1 ."
+	". b2 t2"
+	"t3 b3 .";
+}
+
+.container div{
+	margin-top: 50px;
+	margin-bottom: 50px;
+ 	position: relative;
+}
+
+.container p{
+	position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.box{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   	border: 1px solid;
+}
+
+.t1 {
+	grid-area: t1; 
+	text-align: right;
+}
+.t3 { 
+	text-align: right;
+	grid-area: t3; 
+}
+.t2 { grid-area: t2; }
+.b1 { grid-area: b1; }
+.b2 { grid-area: b2; }
+.b3 { grid-area: b3; }
+
+.np-screen{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 70%;
+    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0;
+    border: 1px solid;
+    background-color: grey;
+    font-family: 'Arial';
+}
+
+.negative{
+	list-style-position: inside;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+	width: 70%;
+    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0;
+    border: 1px solid;
+    font-family: 'Arial';
+}
+
+.positive{
+    justify-content: right;
+    align-items: right;
+	width: 70%;
+    height: 100vh;
+    margin-bottom: 100px;
+    padding: 0;
+    border: 1px solid;
+    font-family: 'Arial';
+}
+
+.column {
+	flex: 1;
+    width: 33.33%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 5px;
+
+}
+
+.column h2 {
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column-container{
+	display: flex;
+	margin: 200px;
+	justify-content: space-between;
+}
+
+
