@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+</head>
+<body>
+  
+
+
+<script>
+
+  let projection = d3.geoMercator();
+  d3.json("nyc.geojson").then(geodata => {
+  let projection = d3.geoConicEqualArea()
+    .fitSize([360, 480], geodata);
+  let generator = d3.geoPath().projection(projection);
+  d3.select("g.map")
+    .selectAll("path")
+    .data(geodata.features)
+    .join("path")
+    .attr("d", generator)
+    .attr('stroke', '#000')
+    .attr('fill', '#fff')
+});
+
+</script>
+</body>

@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'AntKiller';
+    src: url('assets/antkiller-font/Antkiller-9MKj.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noise';
+    src: url('assets/sd-noise-font/SdnoisedemoRegular-ALKGL.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Musical';
+    src: url('assets/musical-tone-font/MusicalTone-7BJ4A.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SDGlitch';
+    src: url('assets/sd-glitch-2-font/SdglitchdemoRegular-YzROj.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*DIV 1*/
+
+.full-page {
+	position: relative;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid;
+}
+
+#intro{
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	margin-top: 13vh;
+	margin-bottom: 10px;
+	background-image: url('assets/intro.png');
+	background-size: cover;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title{
+	text-align: center;
+	font-family: 'Noise', sans-serif;
+	font-size: 130px;
+	color: white;
+}
+
+#cacaphony{
+	display: inline-block;
+    background: linear-gradient(to right, black 37%, white 30%, white 70%, white 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Noise', sans-serif;
+    transform: translateX(-150px);
+}
+
+#symphony{
+	display: inline-block;
+	background: linear-gradient(to right, white 61%, black 30%, black 70%, black 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Noise', sans-serif;
+    transform: translateX(160px);
+}
+
+.centered-text{
+	width: 450px;
+	text-align: center;
+	margin: auto;
+	font-family: 'Inter';
+	font-size: 15px;
+}
+
+#arrow{
+	width: 40px;
+	margin-top: 50px;
+	margin-left: 49%;
+	margin-right: 50%;
+}
+
+
+/*DIV 2*/
+
+#background-stripe{
+	position: absolute;
+	width: 100vw;
+	height: 150px;
+	margin-top: 35vh;
+	z-index: 1;
+}
+
+.sound-container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	background-image: url('assets/glitch2.jpeg');
+	width: 100vw;
+	height: 175px;
+	margin-top: 40vh;
+	border: 1px solid;
+	z-index: 10;
+}
+
+.sound-container div{
+	width: 175px;
+	height: 250px;
+	border: 1px solid;
+	background-color: grey;
+	z-index: 10;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.audio-icon{
+	width: 60px;
+	margin: auto;
+	margin-top: 30px;
+	opacity: 70%;
+	display: block;
+}
+
+.sound-container p{
+	text-align: center;
+	margin: 18px;
+	margin-top: 50%;
+}
+
+
+
+
+
+
+
+
+
+
