@@ -649,12 +649,13 @@ body, html {
 	color: black;
 	text-align: center;
 	font-family: 'M PLUS Code Latin';
-	font-size: 20px;
+	font-size: 19px;
 	background-color: white;
 }
 
-#impact6 7{
-	margin: 25px;
+#impact7 p{
+	margin-left: 45px;
+	margin-right: 45px;
 }
 
 #decor15{
@@ -671,5 +672,76 @@ body, html {
 	bottom:0px;
 	left: 0%;
 }
+
+/*DIV 12*/
+
+#positive-graph{
+	position: absolute;
+	width: 60%;
+	height: 40%;
+	border: 1px solid;
+	z-index: 30;
+	top: 25%;
+	right: 0px;
+	background-color: white;
+}
+
+#decor17{
+	position: absolute;
+	width: 425px;
+	bottom: 0px;
+	left: 0px;
+}
+
+/* DIV 13 */
+
+#decor18{
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	z-index: -10;
+	rotate: 180deg;
+}
+
+#rec-title-div{
+	width: 60%;
+	height: 60%;
+	display: flex;
+	margin: auto;
+	margin-top: 10%;
+    justify-content: center;
+    align-items: end;
+    border: 1px solid;
+}
+
+#rec-img{
+	position: absolute;
+	width: 35%;
+	left: 20%;
+	transform: translateX(-12%);
+}
+
+#rec-title{
+	position: absolute;
+	top: 25%;
+	font-family: 'M PLUS Code Latin';
+	font-weight: 600;
+	font-size: 50px;
+	/*background: linear-gradient(to right, white 61%, black 30%, black 70%, black 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;*/
+}
+
+#rec-text{
+	position: absolute;
+	width: 20%;
+	transform: translateX(55%);
+	font-family: 'Inter';
+	font-size: 15px;
+}
+
+
+
 
 
