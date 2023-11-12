@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;700&family=M+PLUS+Code+Latin:wght@600&display=swap');
+
 @font-face {
     font-family: 'AntKiller';
     src: url('assets/antkiller-font/Antkiller-9MKj.ttf') format('truetype');
@@ -30,14 +32,15 @@ body, html {
     width: 100vw;
     height: 100vh;
     border: 1px solid;
+    margin: 0px;
 }
 
 #intro{
 	width: 400px;
 	height: 400px;
 	margin: auto;
-	margin-top: 13vh;
-	margin-bottom: 10px;
+	margin-top: 15vh;
+	margin-bottom: 15px;
 	background-image: url('assets/intro.png');
 	background-size: cover;
 	display: flex;
@@ -73,10 +76,11 @@ body, html {
 }
 
 .centered-text{
-	width: 450px;
+	width: 480px;
 	text-align: center;
 	margin: auto;
-	font-family: 'Inter';
+	font-family: 'Inter', sans-serif;
+	font-weight: 200;
 	font-size: 15px;
 }
 
@@ -84,7 +88,6 @@ body, html {
 	width: 40px;
 	margin-top: 50px;
 	margin-left: 49%;
-	margin-right: 50%;
 }
 
 
@@ -114,32 +117,264 @@ body, html {
 	width: 175px;
 	height: 250px;
 	border: 1px solid;
-	background-color: grey;
+	background-color: white;
 	z-index: 10;
 	margin-left: 60px;
 	margin-right: 60px;
+	font-family: 'Inter';
+	font-weight: 300; 
+}
+
+.sound-container div:hover{
+	font-weight: 700;
+}
+
+#sound1{
+	background-image: url('assets/coffee.png');
+	background-size: cover;
+}
+
+#sound2{
+	background-image: url('assets/traffic.png');
+	background-size: cover;
+}
+
+#sound3{
+	background-image: url('assets/construction.png');
+	background-size: cover;
 }
 
 .audio-icon{
 	width: 60px;
 	margin: auto;
 	margin-top: 30px;
-	opacity: 70%;
 	display: block;
+	z-index: 20;
+	filter: brightness(100%);
+	filter: contrast(100%);
+	opacity: 80%;
 }
 
 .sound-container p{
 	text-align: center;
-	margin: 18px;
+	margin: 13px;
 	margin-top: 50%;
 }
 
 
+/* DIV 3 */
 
+.centered-subtitle{
+	font-family: 'M PLUS Code Latin';
+	font-size: 60px;
+	font-weight: 900;
+	text-align: center;
+}
 
+.overlapping-container {
+    width: 100vw;
+}
 
+.overlapping-images {
+    display: block;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
 
+.overlapping-images img {
+    width: 350px;
+    height: 210px;
+}
 
+.overlapping-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 1;
+}
 
+.overlapping-text p{
+	width: 200px;
+	background-color: white;
+	padding: 30px;
+	border: 1px solid;
+	font-family: 'Inter';
+	font-size: 14px;
+}
 
+.left-img{
+	transform: translateX(-250px);
+}
+
+.right-img{
+	transform: translateX(250px);
+}
+
+.left-text{
+	transform: translateX(-250px);
+}
+
+.right-text{
+	transform: translateX(250px);
+}
+
+.decor1{
+	position: absolute;
+	width: 175px;
+	bottom: 0px;
+}
+
+.decor2{
+	position: absolute;
+	width: 295px;
+	height: 480px;
+	top: 0px;
+	right: 0px;
+}
+
+.arrow{
+	position: absolute;
+	width: 100px;
+	height: 120px;
+	top: 30px;
+	right: 30px;
+	filter: invert(1);
+}
+
+.arrow:hover{
+	filter: invert(0);
+}
+
+/*DIV 4*/
+
+.outer-container {
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+}
+
+.inner-div {
+    flex: 1;
+/*    border: 1px solid #000;*/
+    padding: 0px;
+}
+
+.outer-container p{
+	font-family: 'M PLUS Code Latin';
+	font-size: 60px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#casestudy{
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 20px;
+}
+
+#nyc-text{
+	position: absolute;
+	width: 300px;
+	float: left;
+	margin-left: 5px;
+	text-align: left;
+	transform: translateY(70px);
+	color: white;
+}
+
+#decor3{
+	width: 300px;
+	z-index: -10;
+	float: right;
+	margin: 0px;
+}
+
+#nyc{
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	z-index: -10;
+	transform: translateY(-70px);
+	z-index: 10;
+}
+
+#decor-box1{
+	position: absolute;
+	width: 500px;
+	height: 400px;
+	border: 1px solid;
+	top: 20%;
+	left: 34%;
+	z-index: 20;
+}
+
+#decor4{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left: 150px;
+}
+
+#decor5{
+	position: absolute;
+	width: 250px;
+	height: 50px;
+	bottom: 0px;
+}
+
+#decor6{
+	position: absolute;
+	width: 400px;
+	height: 250px;
+	bottom: 0px;
+	right: 0px;
+	z-index: -10;
+}
+
+/* DIV 5 */
+
+.centered-text2{
+	width: 520px;
+	text-align: center;
+	margin: auto;
+	margin-top: 150px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+}
+
+/* DIV 6  */
+
+#negative-titleimg{
+	position: absolute;
+	width: 70%;
+	height: 60%;
+	background-image: url('assets/nyc2.png');
+	background-size: cover;
+}
+
+#negative-title{
+	position: absolute;
+	font-family: 'Noise', sans-serif;
+	font-size: 170px;
+	width: 60%;
+	transform: translateX(16%);
+	height: 900px;
+	border: 1px solid;
+}
+
+#negative-title p{
+	float: right;
+}
+
+.negative-text{
+	color: black;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+}
 
