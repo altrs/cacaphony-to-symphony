@@ -573,6 +573,7 @@ body, html {
 	margin: 0px;
 	margin-top: 25px;
 	margin-right: 5px;
+	margin-left: 10px;
 }
 
 #main-positive-title{
@@ -677,13 +678,37 @@ body, html {
 
 #positive-graph{
 	position: absolute;
-	width: 60%;
-	height: 40%;
+	width: 80%;
+	height: 20%;
 	border: 1px solid;
 	z-index: 30;
 	top: 25%;
 	right: 0px;
 	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('assets/footer.png');
+}
+
+.p-graph{
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	border: 1px solid;
+	margin-left: 50px;
+}
+
+.p-img{
+	width: 300px;
+	height: 300px;
+}
+
+.p-graph-title{
+	position: absolute;
+	transform: translateY(-50px);
+	margin-left: 8%;
+	font-family: 'M PLUS Code Latin';
 }
 
 #decor17{
@@ -794,7 +819,7 @@ body, html {
 }
 
 #rec-graph-title{
-	font-family: 'Inter';
+	font-family: 'M PLUS Code Latin';
 	font-size: 50px;
 	font-weight: 900;
 	text-align: center;
@@ -837,10 +862,101 @@ body, html {
 	right: 0px;
 }
 
+#mockup-text{
+	position: absolute;
+	font-family: 'M PLUS Code Latin';
+	font-weight: 900;
+	font-size: 50px;
+	top: 25%;
+	right: 10%;
+}
+
+.mockup{
+	position: absolute;
+	width: 250px;
+}
+
+#mp1{
+	top: 7%;
+	left: 15%;
+}
+
+#mp2{
+	top: 30%;
+	right: 45%;
+}
+
+#conclusion{
+	width: 500px;
+	text-align: center;
+	margin: auto;
+	border: 1px solid;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+	margin-top: 10%;
+	background-color: white;
+}
+
+#conclusion-title{
+	font-family: 'M PLUS Code Latin';
+	font-weight: 900;
+	font-size: 50px;
+}
 
 
+#conclusion-text{
+	font-family: 'Inter';
+	font-size: 20px;
+}
 
+#decor20{
+	position: absolute;
+	width: 250px;
+	top: 10%;
+	right: 25%;
+	z-index: -30;
+}
 
+#biblo{
+	position: absolute;
+	width: 50%;
+	height: 160vh;
+	border: 1px solid;
+	padding: 100px;
+	right: 15%;
+}
 
+#decor22{
+	position: absolute;
+	width: 21%;
+	top: 30%;
+}
 
+#b-title{
+	float: right;
+	font-family: 'M PLUS Code Latin';
+	font-weight: 900;
+	font-size: 50px;
+}
 
+#b-text{
+	float: inline-end;
+}
+
+#decor21{
+	position: absolute;
+	right: 0px;
+	width: 15%;
+}
+
+.footer-container{
+	background-image: url("assets/footer.png");
+	width: 100vw;
+	height: 100px;
+	z-index: 1;
+	text-align: center;
+	padding: 10px;
+	font-family: 'Inter';
+	color: white;
+}
