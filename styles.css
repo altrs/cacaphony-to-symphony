@@ -339,6 +339,15 @@ body, html {
 
 /* DIV 5 */
 
+.fade-in-text {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+.fade-in-text.fade-in {
+    opacity: 1;
+}
+
 .centered-text2{
 	width: 520px;
 	text-align: center;
@@ -921,7 +930,7 @@ body, html {
 #biblo{
 	position: absolute;
 	width: 50%;
-	height: 160vh;
+	height: 170vh;
 	border: 1px solid;
 	padding: 100px;
 	right: 15%;

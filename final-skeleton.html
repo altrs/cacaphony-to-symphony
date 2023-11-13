@@ -22,20 +22,24 @@
 
     <!-- DIV 2 -->
 
+    <audio id="coffee" src="assets/coffee.wav"></audio>
+    <audio id="traffic" src="assets/traffic.mov"></audio>
+    <audio id="construction" src="assets/construction.wav"></audio>
+
     <div class="full-page">
       <!-- <img id="background-stripe" src="assets/glitch2.jpeg"> -->
       <div class="sound-container">
-        <div id="sound1">
+        <div id="sound1" onclick="playCoffee()">
           <img class="audio-icon" src="assets/audio1.png"/>
-          <p>COFFEE SHOP: (decibel amount)</p>
+          <p>COFFEE SHOP: ~70dB</p>
         </div>
-        <div id="sound2">
+        <div id="sound2" onclick="playTraffic()">
           <img class="audio-icon" src="assets/audio2.png"/>
-          <p>DISTANT TRAFFIC: (decibel amount)</p>
+          <p>MOTOR TRAFFIC: ~110 dB</p>
         </div>
-        <div id="sound3">
+        <div id="sound3" onclick="playConstruction()">
           <img class="audio-icon" src="assets/audio3.png"/>
-          <p>CONSTRUCTION: (decibel amount)</p>
+          <p>CONSTRUCTION: ~90dB</p>
         </div>
       </div>
     </div>
@@ -80,9 +84,9 @@
 
     <!-- DIV 5 -->
     <div class="full-page">
-      <p class="centered-text2">
-        More than 30 million people in the U.S. have hearing loss due to exposure to loud noise. <br><br><br><br> In New York City, nearly one in six adults report ringing in their ears or hearing loss. <br><br><br><br> About 20% of New Yorkers say they are frequently disturbed by noise at home. 
-      </p>
+      <p class="centered-text2 fade-in-text" id="line1">More than 30 million people in the U.S. have hearing loss due to exposure to loud noise.</p>
+      <p class="centered-text2 fade-in-text" id="line2">In New York City, nearly one in six adults report ringing in their ears or hearing loss.</p>
+      <p class="centered-text2 fade-in-text" id="line3">About 20% of New Yorkers say they are frequently disturbed by noise at home.</p>
     </div>
 
     <!-- DIV 6 -->
@@ -170,14 +174,18 @@
         <div class="p-graph">
           <p class="p-graph-title">Low dB(50 dB)</p>
           <img class="p-img" src="assets/NOISE_LOW.gif"/>
+          <p style="font-family: 'Inter';">Low noise (such as a library) is good for concentrating however, it's not always great for thinking up new ideas.</p>
+          <p></p>
         </div>
         <div class="p-graph">
           <p class="p-graph-title">Moderate dB(70 dB)</p>
           <img class="p-img" src="assets/NOISE_MED.gif"/>
+          <p style="font-family: 'Inter';">Moderate noise (a busy café) seems to encourage creative thinking; helping people come up with cool ideas.</p>
         </div>
         <div class="p-graph">
           <p class="p-graph-title">High dB (85 dB)</p>
           <img class="p-img" src="assets/NOISE_HIGHT.gif"/>
+          <p style="font-family: 'Inter';">High noise is like a really noisy construction site. It makes it hard to think and be creative. People don't come up with many new ideas when it's super loud.</p>
         </div>
       </div>
       <img id="decor17" src="assets/decor2.png">
@@ -190,7 +198,7 @@
         <img id="rec-img" src="assets/nyc4.png"/>
         <p id="rec-title">RECCOMENDATIONS</p>
         <div id="rec-text">
-        <p>Noise-regulation systems already in place are extremely advanced at recording real time data of noise levels, they almost solely focus only on the collection of the data, leaving the rest up to the DEP. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time*. Considering the powerful IoT systems already in place that collect real time data about noise in NYC, there should be a solution that parallels this constant influx of useful data.</p>
+        <p>Noise-regulation systems already in place are extremely advanced at recording real time data of noise levels; However, they almost solely focus only on the collection of the data, leaving the rest up to the DEP. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time*. Considering the powerful IoT systems already in place that collect real time data about noise in NYC, there should be a solution that parallels this constant influx of valuable data.</p>
         </div>
       </div>
     </div>
@@ -222,35 +230,35 @@
       <div class="recs" id="rec2">
         <div class="rec-para">
           <p class="rec-subtitle">Restructure Info Flows</p>
-          <p>Rearrange who has access to the information (Based on Donna Meadow’s 9 Leverage Points). There is an extremely large amount of information being collected by these organizations aiming to decrease noise pollution; However, this information is not  widely shared.</p>
+          <p>There is an extremely large amount of information being collected by these organizations aiming to decrease noise pollution; However, this information is not widely shared. Rearrange who has access to the information in order to combat noise pollution (Based on Donna Meadow’s Nine Leverage Points). </p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
       <div class="recs" id="rec3">
         <div class="rec-para">
           <p class="rec-subtitle">Make the Data Accessible</p>
-          <p>While there is a fair amount of ‘open data’ regarding noise pollution in NYC, the data is generally only open to those who know where to look and how to understand it. Therefore, this data is not readily accessible (in a way that could help them on an individual level) to the majority of people who have a great probability of being mentally or physically affected by noise pollution.</p>
+          <p>While there is a fair amount of ‘open data’ regarding noise pollution in NYC, the data is generally only open to those who know where to look and how to understand it. Therefore, this data is not readily accessible in a way that could help citizens on an individual and actionable level.</p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
       <div class="recs" id="rec4">
         <div class="rec-para">
           <p class="rec-subtitle">Collect and Display the Data On a User-Friendly Platform</p>
-          <p>Being sure to clean the data and organize it so the user can see the information that is most relevant to them (in this instance, that means 311 service requests submitted nearby them and audio data from the sensors closest to them).</p>
+          <p>Being sure to clean the data and organize it so the users can see the information that is most relevant to them (in this instance, that means 311 service requests submitted nearby them and audio data from the sensors closest to them). See mockup below.</p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
       <div class="recs" id="rec5">
         <div class="rec-para">
           <p class="rec-subtitle">Example</p>
-          <p>The article, “The Future of Smart Cities with AI and Smart Noise Management Systems” speculates that by using IoT technology and artificial intelligence, individuals can be directly notified of noise disturbances. In the case of an individual, when they file a noise complaint, they would immediately see if others in their area have filed a noise complaint. This could create the opportunity of community problem solving amongst neighbors</p>
+          <p>The article, “The Future of Smart Cities with AI and Smart Noise Management Systems” speculates that by using IoT technology and artificial intelligence, individuals can be directly notified of noise disturbances. In the case of an individual, when they file a noise complaint, they would immediately see if others in their area have filed a noise complaint. This could create the opportunity of local/community problem solving amongst neighbors.</p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
       <div class="recs" id="rec6">
         <div class="rec-para">
           <p class="rec-subtitle">Increased Security Issues?</p>
-          <p>All the data to be included on this platform is technically already available to the public. Further, safety measures have already been implemented within these organization's collection methods to ensure the anonymity of the data. This platform’s main functionality is ultimately working to merely lower the barrier-of-entry to data that is already open to the public.</p>
+          <p>All the data to be included on this platform is technically already available to the public as safety measures have already been implemented within these organization's collection methods to ensure the anonymity of the data. This platform’s main functionality is ultimately working to merely lower the barrier-of-entry to data that is already open to the public.</p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
@@ -274,7 +282,7 @@
     </div>
 
     <!-- DIV 18 -->
-    <div class="full-page" style="height: 200vh;">
+    <div class="full-page" style="height: 210vh;">
       <img id="decor21" src="assets/decor1.png"/>
       <img id="decor22" src="assets/biblio-decor.png"/>
       <div id="biblo">
@@ -294,7 +302,14 @@
         New York City Department of Health and Mental Hygiene." New York City Department of Health and Mental Hygiene, No. 45, Apr. 2014.<br><br>
         NYC Health. “Noise.” NYC Health. Accessed October 30, 2023. https://www.nyc.gov/site/doh/health/health-topics/noise.page.<br><br>
         Thomas Münzel,1,* Tommaso Gori,1 Wolfgang Babisch,2 and Mathias Basner3. “Cardiovascular Effects of Environmental Noise Exposure.” National Library of Medicine, April 1, 2014. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3971384/. <br><br>
-        Wellington, Ben. “Mapping New York’s Noisiest Neighborhoods.” The New Yorker, The New Yorker, 17 Jan. 2015, www.newyorker.com/tech/annals-of-technology/mapping-new-york-noise-complaints.</p>
+        Wellington, Ben. “Mapping New York’s Noisiest Neighborhoods.” The New Yorker, The New Yorker, 17 Jan. 2015, www.newyorker.com/tech/annals-of-technology/mapping-new-york-noise-complaints.<br><br>
+        Sound credits: <br>
+        Coffee Shop Sound: By soundslikewillem. https://freesound.org/people/soundslikewillem/sounds/264347/ <br>
+        Traffic Sound: By vialgames. https://freesound.org/people/vialgames/sounds/613142/ <br>
+        Construction Sound: By InspectorJ. https://freesound.org/people/InspectorJ/sounds/400991/
+
+        </p>
+        <br>
       </div>
     </div>
 
@@ -307,78 +322,149 @@
     </div>
 
 
-<script type="module">
-    d3.json('311.geojson').then(function (bb) {
-        let width = 700;
-        let height = 600;
-        let projection = d3.geoEqualEarth();
-        projection.fitSize([width, height], bb);
-        let geoGenerator = d3.geoPath().projection(projection).pointRadius(2);
 
-        let svg = d3.select("#my-svg");
+<script>
+  const coffee = document.getElementById("coffee");
+  const traffic = document.getElementById("traffic");
+  const construction = document.getElementById("construction");
 
-        // Draw service request points
-        svg.append('g').selectAll('path')
-            .data(bb.features)
-            .join('path')
-            .attr('d', geoGenerator)
-            .attr('fill', '#00000030');
+  function playCoffee(){
+    coffee.volume = 0.5;
+    coffee.play();
+  }
 
-        // Define the target point (100, 100)
-        var targetX = 120;
-        var targetY = 120;
+  function playTraffic(){
+    traffic.volume = 0.2;
+    traffic.play();
+  }
 
-        // Create an arrowhead marker
-        svg.append('defs').append('marker')
-            .attr('id', 'arrowhead')
-            .attr('refX', 6)  // Adjust this value for arrowhead size
-            .attr('refY', 2)
-            .attr('markerWidth', 6)
-            .attr('markerHeight', 4)
-            .attr('orient', 'auto')
-            .append('path')
-            .attr('d', 'M 0,0 V 4 L6,2 Z');
+  function playConstruction(){
+    construction.volume = 0.2;
+    construction.play();
+  }
 
-        // Function to draw arrows with a drawing effect
-        function drawArrowsWithEffect(index) {
-            if (index < bb.features.length) {
-                var feature = bb.features[index];
-                var sourceX = projection(feature.geometry.coordinates)[0];
-                var sourceY = projection(feature.geometry.coordinates)[1];
-
-                // Create a path element with a line element inside
-                var path = svg.append("path")
-                    .attr("d", `M${sourceX},${sourceY} L${sourceX},${sourceY}`)
-                    .style("fill", "none")
-                    .style("stroke", "#037bfc")
-                    .style("stroke-width", 1)
-                    .attr("marker-end", "url(#arrowhead)");
-
-                // Use transition to simulate the drawing effect
-                path.transition()
-                    .duration(500)  // Adjust the duration as needed
-                    .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
-                    .on("end", function () {
-                        // Remove the old line with the arrowhead
-                        path.remove();
-                        // Create a new line without an arrowhead
-                        svg.append("line")
-                            .attr("x1", sourceX)
-                            .attr("y1", sourceY)
-                            .attr("x2", targetX)
-                            .attr("y2", targetY)
-                            .style("fill", "none")
-                            .style("stroke", "#000000")
-                            .style("stroke-width", 0.5);
-                        // Continue with the next arrow
-                        drawArrowsWithEffect(index + 1);
-                    });
-            }
+  function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
         }
 
-        // Start drawing arrows with the drawing effect
-        drawArrowsWithEffect(0);
-    });
+        // Function to handle scroll events
+        function handleScroll() {
+            var lines = document.querySelectorAll('.fade-in-text');
+
+            lines.forEach(function (line) {
+                if (isElementInViewport(line) && !line.classList.contains('fade-in')) {
+                    // If the element is in the viewport and has not faded in, add a class to fade it in
+                    line.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check on page load
+        handleScroll();
+
+</script>
+
+<script type="module">
+  
+  d3.json('311.geojson').then(function (bb) {
+    let width = 700;
+    let height = 600;
+    let projection = d3.geoEqualEarth();
+    projection.fitSize([width, height], bb);
+    let geoGenerator = d3.geoPath().projection(projection).pointRadius(2);
+
+    let svg = d3.select("#my-svg");
+
+    // Draw service request points
+    svg.append('g').selectAll('path')
+        .data(bb.features)
+        .join('path')
+        .attr('d', geoGenerator)
+        .attr('fill', '#00000030');
+
+    // Define the target point (100, 100)
+    var targetX = 120;
+    var targetY = 120;
+
+    // Create an arrowhead marker
+    svg.append('defs').append('marker')
+        .attr('id', 'arrowhead')
+        .attr('refX', 6)  // Adjust this value for arrowhead size
+        .attr('refY', 2)
+        .attr('markerWidth', 6)
+        .attr('markerHeight', 4)
+        .attr('orient', 'auto')
+        .append('path')
+        .attr('d', 'M 0,0 V 4 L6,2 Z');
+
+    // Function to draw arrows with a drawing effect
+    function drawArrowsWithEffect(index) {
+        if (index < bb.features.length) {
+            var feature = bb.features[index];
+            var sourceX = projection(feature.geometry.coordinates)[0];
+            var sourceY = projection(feature.geometry.coordinates)[1];
+
+            // Create a path element with a line element inside
+            var path = svg.append("path")
+                .attr("d", `M${sourceX},${sourceY} L${sourceX},${sourceY}`)
+                .style("fill", "none")
+                .style("stroke", "#037bfc")
+                .style("stroke-width", 1)
+                .attr("marker-end", "url(#arrowhead)");
+
+            // Use transition to simulate the drawing effect
+            path.transition()
+                .duration(500)  // Adjust the duration as needed
+                .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
+                .on("end", function () {
+                    // Remove the old line with the arrowhead
+                    path.remove();
+                    // Create a new line without an arrowhead
+                    svg.append("line")
+                        .attr("x1", sourceX)
+                        .attr("y1", sourceY)
+                        .attr("x2", targetX)
+                        .attr("y2", targetY)
+                        .style("fill", "none")
+                        .style("stroke", "#000000")
+                        .style("stroke-width", 0.5);
+                    // Continue with the next arrow
+                    drawArrowsWithEffect(index + 1);
+                });
+        }
+    }
+
+    // Function to check if the SVG is in the viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle scroll events
+    function handleScroll() {
+        if (isElementInViewport(svg.node())) {
+            // If the SVG is in the viewport, start drawing arrows
+            drawArrowsWithEffect(0);
+            // Remove the event listener to avoid redundant calls
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }
+
+    // Add event listener for scroll events
+    window.addEventListener('scroll', handleScroll);
+});
 </script>
 
   </body>
