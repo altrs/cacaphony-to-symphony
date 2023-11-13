@@ -616,11 +616,12 @@ body, html {
 	height: 60%;
 	right: 0px;
 	bottom: 100px;
+	z-index: -10;
 }
 
 #positive-subtitle-cont{
 	position: absolute;
-	z-index: 30;
+	z-index: -10;
 	color: white;
 	width: 40%;
 	margin: 0px;
@@ -701,6 +702,7 @@ body, html {
 	justify-content: center;
 	align-items: center;
 	background-image: url('assets/footer.png');
+	z-index: 0;
 }
 
 .p-graph{
@@ -712,15 +714,31 @@ body, html {
 }
 
 .p-img{
+	position: absolute;
 	width: 300px;
 	height: 300px;
+	z-index: 100;
+	opacity: 10%;
+}
+
+.p-img:hover{
+	opacity: 100%;
+}
+
+.small{
+	font-weight: 200;
+	font-size: 12px;
 }
 
 .p-graph-title{
 	position: absolute;
-	transform: translateY(-50px);
-	margin-left: 8%;
+	width: 250px;
 	font-family: 'M PLUS Code Latin';
+	margin: 20px;
+	margin-top: 50px;
+	text-align: center;
+	z-index: 50;
+	font-weight: 600;
 }
 
 #decor17{
