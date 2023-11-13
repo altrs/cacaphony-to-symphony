@@ -786,6 +786,58 @@ body, html {
 	float: right;
 }
 
+/*REC GRAPH*/
+
+#my-svg {
+    width: 700px;
+    height: 600px;
+}
+
+#rec-graph-title{
+	font-family: 'Inter';
+	font-size: 50px;
+	font-weight: 900;
+	text-align: center;
+	margin-top: 25%;
+	margin-bottom: 5px;
+}
+
+#rec-graph{
+	position: absolute;
+	transform: translateX(57%);
+	margin-top: 5%;
+}
+
+#rec-graph-subtitle-main{
+	font-family: 'M PLUS Code Latin';
+	font-size: 30px;
+}
+
+#rec-graph-subtitle{
+	position: absolute;
+	width: 200px;
+	text-align: right;
+	left: 12%;
+	bottom: -20%;
+	font-family: 'Inter';
+}
+
+#decor18{
+	position: absolute;
+	width: 450px;
+	height: 150px;
+	top: 0px;
+}
+
+#decor19{
+	position: absolute;
+	width: 340px;
+	height: 150px;
+	bottom: -31%;
+	right: 0px;
+}
+
+
 
 
 
