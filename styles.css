@@ -540,10 +540,13 @@ body, html {
 
 #negative-graph{
 	position: absolute;
-	width: 55%;
-	height: 90%;
+	width: 60%;
+	height: 80%;
 	bottom: 0px;
 	border: 1px solid;
+	padding: 20px;
+	padding-top: 100px;
+	text-align: center;
 }
 
 #decor12{
