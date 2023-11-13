@@ -372,7 +372,7 @@
 </script>
 
 <script type="module">
-  
+
   d3.json('311.geojson').then(function (bb) {
     let width = 700;
     let height = 600;
@@ -421,7 +421,7 @@
 
             // Use transition to simulate the drawing effect
             path.transition()
-                .duration(500)  // Adjust the duration as needed
+                .duration(100)  // Adjust the duration as needed
                 .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
                 .on("end", function () {
                     // Remove the old line with the arrowhead
