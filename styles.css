@@ -942,6 +942,7 @@ body, html {
 #my-svg {
     width: 700px;
     height: 600px;
+    cursor: pointer;
 }
 
 #rec-graph-title{
@@ -956,7 +957,7 @@ body, html {
 #rec-graph{
 	position: absolute;
 	transform: translateX(57%);
-	margin-top: 5%;
+	margin-top: 3%;
 }
 
 #rec-graph-subtitle-main{
@@ -969,7 +970,7 @@ body, html {
 	width: 200px;
 	text-align: right;
 	left: 12%;
-	bottom: 0%;
+	bottom: 3%;
 	font-family: 'Inter';
 }
 

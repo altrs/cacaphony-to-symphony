@@ -7,6 +7,21 @@
     <title>Cacaphony to Symphony</title>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your CSS styles here */
+        path:hover title {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 9999;
+            pointer-events: none;
+        }
+    </style>
   </head>
   <body>
 
@@ -218,6 +233,7 @@
       <img id="decor18" src="assets/decor3.png"/>
       <div id="rec-graph">
         <p id="rec-graph-title">311 SERVICE REQUESTS</p>
+        <p style="text-align:center; font-family: 'Inter';">HOVER TO SEE <u>DESCRIPTOR</u> AND <u>CREATION DATE</u> (MAY TAKE A MOMENT TO LOAD)</p>
         <svg id="my-svg">
           <image href="assets/dep.png" x="70" y="40" width="100" height="100"></image>
           <rect width="100%" height="100%" fill="none" stroke="black" stroke-width="2"></rect>
@@ -469,97 +485,102 @@ function changeText() {
 <script type="module">
 
   d3.json('311.geojson').then(function (bb) {
-    let width = 700;
-    let height = 600;
-    let projection = d3.geoEqualEarth();
-    projection.fitSize([width, height], bb);
-    let geoGenerator = d3.geoPath().projection(projection).pointRadius(2);
+        let width = 700;
+        let height = 600;
+        let projection = d3.geoEqualEarth();
+        projection.fitSize([width, height], bb);
+        let geoGenerator = d3.geoPath().projection(projection).pointRadius(2);
 
-    let svg = d3.select("#my-svg");
+        let svg = d3.select("#my-svg");
 
-    // Draw service request points
-    svg.append('g').selectAll('path')
-        .data(bb.features)
-        .join('path')
-        .attr('d', geoGenerator)
-        .attr('fill', '#00000030');
+        // Draw service request points with hover tooltips
+        svg.append('g').selectAll('path')
+          .data(bb.features)
+          .join('path')
+          .attr('d', geoGenerator)
+          .attr('fill', '#00000030')
+          .append('title') // Add title element for hover tooltip
+          .text(function (d) {
+              // Check if the properties exist before accessing them
+              var descriptor = d.properties.Descriptor || 'N/A'; // Use 'Descriptor' instead of 'descriptor' if needed
+              var createdDate = d.properties['Created Date'] || 'N/A'; // Use 'Created Date' with brackets for the property with a space
 
-    // Define the target point (100, 100)
-    var targetX = 120;
-    var targetY = 125;
+              return `Descriptor: ${descriptor}\nCreated Date: ${createdDate}`;
+          });
 
-    // Create an arrowhead marker
-    svg.append('defs').append('marker')
-        .attr('id', 'arrowhead')
-        .attr('refX', 6)  // Adjust this value for arrowhead size
-        .attr('refY', 2)
-        .attr('markerWidth', 6)
-        .attr('markerHeight', 4)
-        .attr('orient', 'auto')
-        .append('path')
-        .attr('d', 'M 0,0 V 4 L6,2 Z');
+        // Define the target point (100, 100)
+        var targetX = 120;
+        var targetY = 125;
 
-    // Function to draw arrows with a drawing effect
-    function drawArrowsWithEffect(index) {
-        if (index < bb.features.length) {
-            var feature = bb.features[index];
-            var sourceX = projection(feature.geometry.coordinates)[0];
-            var sourceY = projection(feature.geometry.coordinates)[1];
+        // Create an arrowhead marker
+        svg.append('defs').append('marker')
+            .attr('id', 'arrowhead')
+            .attr('refX', 6)  // Adjust this value for arrowhead size
+            .attr('refY', 2)
+            .attr('markerWidth', 6)
+            .attr('markerHeight', 4)
+            .attr('orient', 'auto')
+            .append('path')
+            .attr('d', 'M 0,0 V 4 L6,2 Z');
 
-            // Create a path element with a line element inside
-            var path = svg.append("path")
-                .attr("d", `M${sourceX},${sourceY} L${sourceX},${sourceY}`)
-                .style("fill", "none")
-                .style("stroke", "#037bfc")
-                .style("stroke-width", 1)
-                .attr("marker-end", "url(#arrowhead)");
+        // Function to draw arrows with a drawing effect
+        function drawArrowsWithEffect(index) {
+            if (index < bb.features.length) {
+                var feature = bb.features[index];
+                var sourceX = projection(feature.geometry.coordinates)[0];
+                var sourceY = projection(feature.geometry.coordinates)[1];
 
-            // Use transition to simulate the drawing effect
-            path.transition()
-                .duration(100)  // Adjust the duration as needed
-                .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
-                .on("end", function () {
-                    // Remove the old line with the arrowhead
-                    path.remove();
-                    // Create a new line without an arrowhead
-                    svg.append("line")
-                        .attr("x1", sourceX)
-                        .attr("y1", sourceY)
-                        .attr("x2", targetX)
-                        .attr("y2", targetY)
-                        .style("fill", "none")
-                        .style("stroke", "#000000")
-                        .style("stroke-width", 0.5);
-                    // Continue with the next arrow
-                    drawArrowsWithEffect(index + 1);
-                });
+                // Create a path element with a line element inside
+                var path = svg.append("path")
+                    .attr("d", `M${sourceX},${sourceY} L${sourceX},${sourceY}`)
+                    .style("fill", "none")
+                    .style("stroke", "#037bfc")
+                    .style("stroke-width", 1)
+                    .attr("marker-end", "url(#arrowhead)");
+
+                // Use transition to simulate the drawing effect
+                path.transition()
+                    .duration(300)  // Adjust the duration as needed
+                    .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
+                    .on("end", function () {
+                        // Remove the old line with the arrowhead
+                        path.remove();
+                        // Create a new line without an arrowhead
+                        svg.append("line")
+                            .attr("x1", sourceX)
+                            .attr("y1", sourceY)
+                            .attr("x2", targetX)
+                            .attr("y2", targetY)
+                            .style("fill", "none")
+                            .style("stroke", "#000000")
+                            .style("stroke-width", 0.5);
+                        // Continue with the next arrow
+                        drawArrowsWithEffect(index + 1);
+                    });
+            }
         }
-    }
 
-    // Function to check if the SVG is in the viewport
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to handle scroll events
-    function handleScroll() {
-        if (isElementInViewport(svg.node())) {
-            // If the SVG is in the viewport, start drawing arrows
-            drawArrowsWithEffect(0);
-            // Remove the event listener to avoid redundant calls
-            window.removeEventListener('scroll', handleScroll);
+        // Function to check if the SVG is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
-    }
 
-    // Add event listener for scroll events
-    window.addEventListener('scroll', handleScroll);
-});
+        // Function to handle scroll events
+        function handleScroll() {
+            if (isElementInViewport(svg.node())) {
+                drawArrowsWithEffect(0);
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    });
 </script>
 
   </body>
