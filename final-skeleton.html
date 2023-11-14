@@ -148,6 +148,16 @@
       <img id="decor8" src="assets/overlap2.png">
       <img id="decor9" src="assets/decor3.png">
       <div id="negative-subtitle-cont">
+        <div id="report">
+          <img src="assets/r1.png" data-text="Animals: 22%"/>
+          <img src="assets/r2.png" data-text="Construction: 37%"/>
+          <img src="assets/r3.png" data-text="Neighbors: 50%"/>
+          <img src="assets/r4.png" data-text="Subway: 10%"/>
+          <img src="assets/r5.png" data-text="Traffic: 56%"/>
+          <div>
+            <p id="rtext">What makes up city noise? (Hover over Image)</p>
+          </div>
+        </div>
         <div id="impact1">
           <p><u>NOISE IMPACTS THE SPEED OF BEHAVIOR</u></p>
           <p id="impact-info">A study on the "Effect of Traffic Noise on Pedestrian Walking Speed"(link) reveals that exposure to noisy urban environments prompts people to walk faster, leading to a more hectic lifestyle with detrimental effects on health and well-being <a href="https://altrs.github.io/cas-skeleton/essay.html#:~:text=A%20study%20on%20the%20%22Effect%20of%20Traffic%20Noise%20on%20Pedestrian%20Walking%20Speed%22%20reveals%20that%20exposure%20to%20noisy%20urban%20environments%20prompts%20people%20to%20walk%20faster%2C%20leading%20to%20a%20more%20hectic%20lifestyle%20with%20detrimental%20effects%20on%20health%20and%20well%2Dbeing." target="_blank">
@@ -379,8 +389,24 @@ management-systems/" target="_blank"><img class="link-small" src="assets/plus.sv
     </div>
 
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
+
+  $(document).ready(function() {
+    // Set default text
+    var defaultText = $("#rtext").text();
+
+    // Change text on hover
+    $("#report img").hover(function() {
+      var newText = $(this).data("text");
+      $("#rtext").text(newText).fadeIn();
+    }, function() {
+      $("#rtext").fadeOut(function() {
+        $(this).text(defaultText);
+      });
+    });
+  });
 
   function showOnScroll() {
     var toEssayDiv = document.getElementById('toEssay');

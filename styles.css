@@ -1282,5 +1282,37 @@ a{
 }
 
 
+#report{
+	display: flex;
+	align-items: center;
+}
+
+#report img{
+	width: 70px;
+	margin-left: 20px
+}
+
+#report div{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	border-right: none;
+}
+
+#rtext{
+	margin: 10px;
+	margin-top: 20%;
+	text-align: center;
+	color: black;
+	font-size: 10px;
+	font-family: 'Inter';
+}
+
+
+
+
 
 
