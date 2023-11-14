@@ -25,6 +25,10 @@ body, html {
     padding: 0;
 }
 
+/*p{
+	mix-blend-mode: normal;
+}
+*/
 /*DIV 1*/
 
 .full-page {
@@ -33,7 +37,18 @@ body, html {
     height: 100vh;
     border: 1px solid transparent;
     margin: 0px;
-    overflow: hidden;
+    background-color: white;
+}
+
+.noiseoverlay {
+    margin: 0;
+    position: fixed;
+    z-index: 30;
+    height: 100vh;
+    width: 100vw;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 #intro{
@@ -86,9 +101,11 @@ body, html {
 }
 
 #arrow{
+	position: absolute;
 	width: 40px;
 	margin-top: 50px;
 	margin-left: 49%;
+	z-index: 9999;
 }
 
 
@@ -897,12 +914,11 @@ body, html {
 
 .rec-back-container{
 	position: absolute;
-	width: 40%;
+	width: 20%;
 	height: 400vh;
 	border: 1px solid black;
-	margin-top: 100px;
-	transform: translateX(90%);
-	z-index: -10;
+	margin-top: 150px;
+	transform: translateX(250%);
 }
 
 .recs{
@@ -916,6 +932,7 @@ body, html {
 	padding: 25px;
 	text-align: right;
 	display: flex;
+	z-index: 100;
 }
 
 .rec-para{

@@ -26,7 +26,7 @@
   <body>
 
     <!-- DIV 1 -->
-
+    <img class="noiseoverlay" src="assets/noiseoverlay.png"/>
     <div class="full-page">
       <div id="intro">
         <p id="main-title"><span id="cacaphony">Cacaphony</span><br> to <br><span id="symphony">Symphony</span></p>
@@ -142,12 +142,12 @@
 
     <!-- DIV 8 -->
     <div class="full-page" style="border-top: 1px transparent;" id="negative-triggerDiv">
-      <img id="decor10" src="assets/glitch-nb.png"/>
-      <div id="impact4">
+      <img id="decor10" style="z-index: 20" src="assets/glitch-nb.png"/>
+      <div id="impact4" style="z-index: 30">
         <p><u>Impact on Physical Health</u></p>
         <p id="impact-info">Loud urban noise can lead to permanent hearing loss, resulting in social isolation, depression, and cognitive decline. The prevalence of likely noise-induced hearing loss from 2 time periods in adults (20–69 years) by race/ethnicity and sex (gender).</p>
       </div>
-      <div id="impact5">
+      <div id="impact5" style="z-index: 30">
         <p><u>Impact on Children</u></p>
         <p id="impact-info">Noise exposure can impact young children’s academic performance by affecting reading comprehension, concentration, memory, and attention span</p>
       </div>
@@ -156,7 +156,8 @@
     <!-- DIV 9 -->
     <div class="full-page" id="negative-triggerDiv">
       <div id="negative-graph">
-        <img style="width: 95%;" src="assets/Noise_HearingLoss.png"/>
+        <!-- <img style="width: 95%;" src="assets/Noise_HearingLoss.png"/> -->
+        <div class="flourish-embed flourish-chart" data-src="visualisation/15735913"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
       </div>
       <img id="decor12" src="assets/overlap1.png"/>
     </div>
@@ -176,7 +177,7 @@
     </div>
 
     <!-- DIV 11 -->
-    <div class="full-page" style="border-top: 1px transparent;" id="positive-triggerDiv">
+    <div class="full-page" style="border-top: 1px transparent;z-index: 800;" id="positive-triggerDiv">
       <img id="decor14" src="assets/decor3.png">
       <img id="decor15" src="assets/decor2.png">
       <div id="positive-subtitle-cont" style="border-bottom: 1px solid white;">
@@ -193,7 +194,7 @@
     </div>
 
     <!-- DIV 12 -->
-    <div class="full-page" id="negative-triggerDiv">
+    <div class="full-page" id="negative-triggerDiv" style="z-index: 800">
       <div id="positive-subtitle-cont"></div>
       <div id="positive-graph">
         <div class="p-graph">
@@ -230,7 +231,7 @@
 
     <!-- DIV 14 -->
     <div class="full-page" style="height: 135vh;">
-      <img id="decor18" src="assets/decor3.png"/>
+      <img id="decor18" src="assets/decor3.png" style="z-index: 30"/>
       <div id="rec-graph">
         <p id="rec-graph-title">311 SERVICE REQUESTS</p>
         <p style="text-align:center; font-family: 'Inter';">HOVER TO SEE <u>DESCRIPTOR</u> AND <u>CREATION DATE</u> (MAY TAKE A MOMENT TO LOAD)</p>
@@ -244,7 +245,7 @@
     </div>
 
     <!-- DIV 15 -->
-    <div class="full-page" style="height: 475vh; margin-top: 200px; background-color: transparent;" id="recs-triggerDiv">
+    <div class="full-page" style="height: 475vh; margin-top: 0px; background-color: white;" id="recs-triggerDiv">
       <div class="rec-back-container"></div>
       <div class="recs" id="rec1">
         <div class="rec-para">
