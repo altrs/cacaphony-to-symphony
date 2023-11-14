@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Your CSS styles here */
         path:hover title {
             font-family: Arial, sans-serif;
             font-size: 14px;
@@ -24,6 +23,30 @@
     </style>
   </head>
   <body>
+
+    <a href="essay.html">
+    <div id="toEssay">
+      <img src="assets/essay.png"/>
+      <svg viewBox="0 0 500 500">
+        <path id="curve" d="M100,300 C171,101 413,94 500,300" />
+        <text width="1000" font-size="50px">
+          <textPath alignment-baseline="top" xlink:href="#curve">
+            &emsp;READ OUR ESSAY!
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    </a>
+
+    <div class="menu-button">Open Menu</div>
+      <div class="menu">
+        <div class="menu-categories">
+          <div class="menu-category" id="webpage" onmouseover="showItems('web')">WEBPAGE</div>
+          <div class="menu-category" id="researchessay" onmouseover="showItems('paper')">RESEARCH ESSAY</div>
+        </div>
+        <div class="menu-items" id="menuItems">
+        </div>
+      </div>
 
     <!-- DIV 1 -->
     <img class="noiseoverlay" src="assets/noiseoverlay.png"/>
@@ -165,7 +188,6 @@
     <!-- DIV 10 -->
     <div class="positive-sticky">
       <p>POSITIVES</p>
-      <img id="positive-decor" src="assets/decor2.png"/>
     </div>
     <div class="full-page" style="border-bottom: 1px transparent;">
       <img id="positive-screen" src="assets/nyc3.png"/>
@@ -351,6 +373,77 @@
 
 
 <script>
+
+  function showOnScroll() {
+    var toEssayDiv = document.getElementById('toEssay');
+    var menuButtonDiv = document.querySelector('.menu-button');
+    var menuDiv = document.querySelector('.menu');
+
+    // Check if the user has scrolled past a certain point
+    if (window.scrollY > 100) { // Adjust the scroll position threshold as needed
+      toEssayDiv.style.display = 'block';
+      menuButtonDiv.style.display = 'block';
+      menuDiv.style.display = 'block';
+    }
+  }
+
+  // Attach the function to the scroll event
+  window.addEventListener('scroll', showOnScroll);
+
+  var items = {
+  web: [
+    { name: "Introduction", id: "web-intro" },
+    { name: "Noise effects on the population", id: "web-effect" },
+    {
+      name: "Case Study: Positives and Negatives of New York City’s Noise",
+      id: "web-nyc"
+    },
+    { name: "Existing Noise Regulation Systems", id: "web-regulation" },
+    { name: "Recommendations", id: "web-recom" },
+    { name: "Conclusion", id: "web-conclusion" },
+    { name: "Bibliography", id: "web-bibli" }
+  ],
+  paper: [
+    { name: "Intro", id: "paper-intro" },
+    { name: "Noise effect", id: "paper-effect" },
+    { name: "Case Study", id: "paper-nyc" },
+    { name: "Negative", id: "paper-neg" },
+    { name: "Positive", id: "paper-pos" },
+    { name: "Recommendation", id: "paper-recom" },
+    { name: "Mock-ups", id: "paper-mock" },
+    { name: "Conclusion", id: "paper-conclusion" },
+    { name: "Bibliography", id: "paper-bibli" }
+  ]
+};
+
+function showItems(category) {
+  var menuItems = document.getElementById("menuItems");
+  menuItems.innerHTML = ""; // Clear existing items
+  items[category].forEach(function (item) {
+    var a = document.createElement("a");
+    a.className = "menu-item";
+    a.textContent = item.name;
+    a.href = "#" + item.id;
+    menuItems.appendChild(a);
+  });
+
+  menuItems.style.display = "flex"; // Show the items
+}
+
+document.addEventListener("click", function (event) {
+  var menu = document.querySelector(".menu");
+  var menuButton = document.querySelector(".menu-button");
+
+  if (menuButton.contains(event.target)) {
+    menu.classList.add("visible");
+  } else if (!menu.contains(event.target)) {
+    menu.classList.remove("visible");
+  }
+});
+
+
+//sound
+
   const coffee = document.getElementById("coffee");
   const traffic = document.getElementById("traffic");
   const construction = document.getElementById("construction");

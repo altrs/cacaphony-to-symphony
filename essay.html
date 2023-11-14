@@ -42,10 +42,56 @@
         width: 15%;
         transform: translateY(10px);
       }
+
+      #toEssay{
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          width: 150px;
+          height: 150px;
+          z-index: 9999;
+          font-family: 'Inter';
+          font-size: 10px;
+          text-align: center;
+          color: white;
+          margin: 10px;
+        }
+
+        #toEssay img{
+          position: absolute;
+          width: 150px;
+          margin-top: 20px;
+        }
+
+        #toEssay img:hover{
+          filter: invert(1);
+          color: black;
+        }
+
+        #curve{
+          position: absolute;
+          transform: translateX(-13.5%) translateY(-18%);
+           fill: transparent;
+        }
+
       
     </style>
     </head>
     <body>
+
+      <a href="final-skeleton.html">
+      <div id="toEssay">
+        <img src="assets/essay.png"/>
+        <svg viewBox="0 0 500 500">
+          <path id="curve" d="M100,300 C171,101 413,94 500,300" />
+          <text width="1000" font-size="50px">
+            <textPath alignment-baseline="top" xlink:href="#curve">
+              &nbsp;READ OUR WEBPAGE!
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      </a>
       
       <div id="container">
         <h1>Cacophony to Symphony<br><br></h1>

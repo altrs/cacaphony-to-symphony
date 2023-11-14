@@ -1,0 +1,8 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="500" fill="white"/>
+<path d="M250 125V375" stroke="black" stroke-width="50" stroke-linecap="square"/>
+<path d="M150 177L150 323" stroke="black" stroke-width="50" stroke-linecap="square"/>
+<path d="M50 227L50 275" stroke="black" stroke-width="50" stroke-linecap="square"/>
+<path d="M326 250L425 250" stroke="black" stroke-width="50" stroke-linecap="square"/>
+<path d="M375.5 200.5V299.5" stroke="black" stroke-width="50" stroke-linecap="square"/>
+</svg>
