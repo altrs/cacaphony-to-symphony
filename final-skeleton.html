@@ -666,7 +666,7 @@ function changeText() {
 
                 // Use transition to simulate the drawing effect
                 path.transition()
-                    .duration(300)  // Adjust the duration as needed
+                    .duration(100)  // Adjust the duration as needed
                     .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
                     .on("end", function () {
                         // Remove the old line with the arrowhead
