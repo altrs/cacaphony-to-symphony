@@ -33,6 +33,7 @@ body, html {
     height: 100vh;
     border: 1px solid transparent;
     margin: 0px;
+    overflow: hidden;
 }
 
 #intro{
@@ -239,13 +240,14 @@ body, html {
 	position: absolute;
 	width: 100px;
 	height: 120px;
-	top: 30px;
+	bottom: 30px;
 	right: 30px;
-	filter: invert(1);
+	filter: invert(0);
+	z-index: 999;
 }
 
 .arrow:hover{
-	filter: invert(0);
+	filter: invert(1);
 }
 
 /*DIV 4*/
@@ -340,9 +342,9 @@ body, html {
 /* DIV 5 */
 
 .fade-in-text {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
 .fade-in-text.fade-in {
     opacity: 1;
@@ -377,6 +379,36 @@ body, html {
 	border: 1px solid black;
 	border-bottom: 1px solid white;
 	transform: translateX(74%);
+	bottom: 0px;
+}
+
+.negative-sticky{
+	opacity: 0;
+	position: fixed;
+	height: 100vh;
+	width: 10%;
+    top: 0%;
+    right: 0%;
+    z-index: 999;
+    pointer-events: none;
+    background-color: white;
+}
+
+.negative-sticky p {
+    transform: rotate(90deg);
+    width: 500px;
+    margin: 0px;
+    text-align: center;
+    transform-origin: left bottom; /* Adjust the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: "Noise";
+    font-size: 150px;
+    pointer-events: none;
+}
+
+#negative-decor{
+	position: absolute;
+	width: 200px;
 	bottom: 0px;
 }
 
@@ -558,6 +590,39 @@ body, html {
 }
 
 /* DIV 10 */
+
+.positive-sticky{
+	opacity: 0;
+	position: fixed;
+	height: 100vh;
+	width: 10%;
+    top: 0%;
+    left: 9%;
+    z-index: 999;
+    pointer-events: none;
+    background-color: white;
+}
+
+.positive-sticky p {
+    transform: rotate(270deg) translateX(-100%);
+    width: 500px;
+    margin: 0px;
+    text-align: center;
+    transform-origin: left bottom; /* Adjust the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: "Noise";
+    font-size: 150px;
+    background-color: white;
+    pointer-events: none;
+}
+
+
+#positive-decor{
+	position: absolute;
+	transform: translateX(-100%);
+	width: 200px;
+	bottom: 0px;
+}
 
 #positive-screen{
 	position: absolute;
@@ -750,6 +815,37 @@ body, html {
 
 /* DIV 13 */
 
+.recs-sticky{
+	opacity: 0;
+	position: fixed;
+	height: 100vh;
+	width: 10%;
+    top: 0%;
+    right: 0%;
+    z-index: 999;
+    pointer-events: none;
+    background-color: white;
+}
+
+.recs-sticky p {
+    transform: rotate(90deg);
+    width: 500px;
+    margin: 0px;
+    margin-top: -20%;
+    text-align: center;
+    transform-origin: left bottom; /* Adjust the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family: "Noise";
+    font-size: 100px;
+    pointer-events: none;
+}
+
+#recs-decor{
+	position: absolute;
+	width: 200px;
+	bottom: 0px;
+}
+
 #decor18{
 	position: absolute;
 	width: 40%;
@@ -873,7 +969,7 @@ body, html {
 	width: 200px;
 	text-align: right;
 	left: 12%;
-	bottom: -20%;
+	bottom: 0%;
 	font-family: 'Inter';
 }
 
