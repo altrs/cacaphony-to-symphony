@@ -41,8 +41,8 @@
     <div class="menu-button">Open Menu</div>
       <div class="menu">
         <div class="menu-categories">
-          <div class="menu-category" id="webpage" onmouseover="showItems('web')">WEBPAGE</div>
-          <div class="menu-category" id="researchessay" onmouseover="showItems('paper')">RESEARCH ESSAY</div>
+          <a href="final-skeleton.html"><div class="menu-category" id="webpage" onmouseover="showItems('web')">WEBPAGE</div></a>
+          <!-- <a href="essay.html"><div class="menu-category" id="researchessay" onmouseover="showItems('paper')">RESEARCH ESSAY</div></a> -->
         </div>
         <div class="menu-items" id="menuItems">
         </div>
@@ -84,9 +84,9 @@
 
     <!-- DIV 3 -->
     <!-- SLIDE 1 -->
-    <div class="full-page">
+    <div class="full-page" id="web-intro">
       <p class="centered-subtitle">Effects of <br> Noise Frequency</p>
-      <a href="https://www.jstor.org/stable/40965841"><img class="firstlink" src="assets/plus.svg"></a>
+      <a href="https://www.jstor.org/stable/40965841" target="_blank"><img class="firstlink" src="assets/plus.svg"></a>
       <div class="overlapping-container">
         <img class="decor1" src="assets/decor1.png"/>
         <img class="decor2" src="assets/decor1.png"/>
@@ -104,7 +104,7 @@
     </div>
 
     <!-- DIV 4 -->
-    <div class="full-page">
+    <div class="full-page" id="web-effect">
       <div id="decor-box1"></div>
       <img id="decor4" src="assets/overlap1.png"/>
       <div class="outer-container">
@@ -126,7 +126,7 @@
       <p class="centered-text2 fade-in-text" id="line1">More than 30 million people in the U.S. have hearing loss due to exposure to loud noise.</p>
       <p class="centered-text2 fade-in-text" id="line2">In New York City, nearly one in six adults report ringing in their ears or hearing loss.</p>
       <p class="centered-text2 fade-in-text" id="line3">About 20% of New Yorkers say they are frequently disturbed by noise at home.</p>
-      <a href="https://www.nyc.gov/site/doh/health/health-topics/noise.page"><img class="link" style="left: 48%; bottom: 7%;" src="assets/plus.svg"></a>
+      <a href="https://www.nyc.gov/site/doh/health/health-topics/noise.page" target="_blank"><img class="link" style="left: 48%; bottom: 7%;" src="assets/plus.svg"></a>
     </div>
 
     <!-- DIV 6 -->
@@ -134,7 +134,7 @@
       <p>NEGATIVES</p>
       <img id="negative-decor" src="assets/decor2.png"/>
     </div>
-    <div class="full-page">
+    <div id="web-pos" class="full-page">
       <img id="negative-screen" src="assets/nyc2.png"/>
       <div id="negative-title">
         <p id="main-negative-title">NEGATIVE IMPACTS OF URBAN NOISE</p>
@@ -158,11 +158,13 @@
       <div class="two-impacts">
           <div id="impact2">
             <p><u>Impact on mental health</u></p>
-            <p id="impact-info">With continued exposure to noise pollution, a person’s sensitivity to stress increases</p>
+            <p id="impact-info">With continued exposure to noise pollution, a person’s sensitivity to stress increases <a href="https://www.soundhealing.gr/how-city-noise-pollution-and-sounds-affect-our-health/" target="_blank">
+        <img class="link-small" src="assets/plus.svg"></a></p>
           </div>
           <div id="impact3">
             <p><u>Impact on physical health</u></p>
-            <p id="impact-info">People living in noisy areas are more likely to be hospitalized for heart disease and strokes than those who live in quieter places.</p>
+            <p id="impact-info">People living in noisy areas are more likely to be hospitalized for heart disease and strokes than those who live in quieter places. <a href="https://www.nyc.gov/site/doh/health/health-topics/noise.page" target="_blank">
+        <img class="link-small" src="assets/plus.svg"></a></p>
           </div>
         </div>
     </div>
@@ -172,7 +174,7 @@
       <img id="decor10" style="z-index: 20" src="assets/glitch-nb.png"/>
       <div id="impact4" style="z-index: 30">
         <p><u>Impact on Physical Health</u></p>
-        <p id="impact-info">Loud urban noise can lead to permanent hearing loss, resulting in social isolation, depression, and cognitive decline. The prevalence of likely noise-induced hearing loss from 2 time periods in adults (20–69 years) by race/ethnicity and sex (gender).</p>
+        <p id="impact-info">Loud urban noise can lead to permanent hearing loss, resulting in social isolation, depression, and cognitive decline. The prevalence of likely noise-induced hearing loss from 2 time periods in adults (20–69 years) by race/ethnicity and sex (gender). <a href="https://www.nyc.gov/site/doh/health/health-topics/noise.page" target="_blank"><img class="link-small" src="assets/plus.svg"></a></p>
       </div>
       <div id="impact5" style="z-index: 30">
         <p><u>Impact on Children</u></p>
@@ -193,7 +195,7 @@
     <div class="positive-sticky">
       <p>POSITIVES</p>
     </div>
-    <div class="full-page" style="border-bottom: 1px transparent;">
+    <div class="full-page" style="border-bottom: 1px transparent;" id="web-neg">
       <img id="positive-screen" src="assets/nyc3.png"/>
       <div id="positive-title">
         <p id="main-positive-title">POSITIVE IMPACTS OF URBAN NOISE</p>
@@ -203,17 +205,17 @@
     </div>
 
     <!-- DIV 11 -->
-    <div class="full-page" style="border-top: 1px transparent;z-index: 800;" id="positive-triggerDiv">
+    <div class="full-page" style="border-top: 1px transparent;z-index: 800;" id="positive-triggerDiv" id="web-neg">
       <img id="decor14" src="assets/decor3.png">
       <img id="decor15" src="assets/decor2.png">
       <div id="positive-subtitle-cont" style="border-bottom: 1px solid white;">
         <div id="impact6">
           <p><u>NOISE INCREASES CREATIVITY</u></p>
-          <p id="impact-info">Moderate background noise (around 70 decibels) can enhance human creativity, fostering innovative thinking in workspaces and classrooms.</p>
+          <p id="impact-info">Moderate background noise (around 70 decibels) can enhance human creativity, fostering innovative thinking in workspaces and classrooms.<a href="https://doi.org/10.1086/665048" target="_blank"><img class="link-small" src="assets/plus.svg"></a></p>
         </div>
         <div id="impact7">
           <p><br><u>CULTURAL COMMUNITY OF NOISE</u></p>
-          <p id="impact-info">Urban noise, when thoughtfully curated, contributes to the vibrancy and dynamism of city life.</p>
+          <p id="impact-info">Urban noise, when thoughtfully curated, contributes to the vibrancy and dynamism of city life.<a href="https://doi.org/10.2307/43197543." target="_blank"><img class="link-small" src="assets/plus.svg"></a></p>
         </div>
       </div>
       <img id="decor16" src="assets/decor3.png">
@@ -236,6 +238,7 @@
           <p class="p-graph-title"><u>High dB (85 dB)</u><br><br> High noise is like a construction site. It makes it hard to think and be creative. People don't come up with many new ideas when it's super loud. <br><br><span class="small">(Hover to see creativity<br>levels visualized)</span></p>
         </div>
       </div>
+      <a href="https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A285537&dswid=561." target="_blank"><img class="link" style="right: 5%; bottom: 30%;" src="assets/plus.svg"></a>
       <img id="decor17" src="assets/decor2.png">
     </div>
 
@@ -244,13 +247,13 @@
       <p>RECCOMENDATIONS</p>
       <img id="recs-decor" src="assets/decor2.png"/>
     </div>
-    <div class="full-page">
+    <div class="full-page" id="web-recom">
       <img id="decor18" src="assets/glitch-nb.png"/>
       <div id="rec-title-div">
         <img id="rec-img" src="assets/nyc4.png"/>
         <p id="rec-title">RECCOMENDATIONS</p>
         <div id="rec-text">
-        <p>Noise-regulation systems already in place are extremely advanced at recording real time data of noise levels; However, they almost solely focus only on the collection of the data, leaving the rest up to the DEP. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time*. Considering the powerful IoT systems already in place that collect real time data about noise in NYC, there should be a solution that parallels this constant influx of valuable data.</p>
+        <p>Noise-regulation systems already in place are extremely advanced at recording real time data of noise levels; However, they almost solely focus only on the collection of the data, leaving the rest up to the DEP. Whilst this remedies the issue to a certain extent, the turnaround time can be slow, short-lasting and overall unhelpful to citizens a majority of the time <a href="https://www.mdpi.com/1424-8220/19/6/1415" target="_blank"><img class="link-small" src="assets/plus.svg"></a>. Considering the powerful IoT systems already in place that collect real time data about noise in NYC, there should be a solution that parallels this constant influx of valuable data.</p>
         </div>
       </div>
     </div>
@@ -266,7 +269,7 @@
           <rect width="100%" height="100%" fill="none" stroke="black" stroke-width="2"></rect>
         </svg>
       </div>
-      <p id="rec-graph-subtitle"><span id="rec-graph-subtitle-main">31,338 SERVICE REQUESTS</span><br>Were filed for noise complaints in October of 2023. All of them being described as "loud music"</p>
+      <p id="rec-graph-subtitle"><span id="rec-graph-subtitle-main">31,338 SERVICE REQUESTS</span><br>Were filed for noise complaints in October of 2023. All of them being described as "loud music"<a href="https://nycopendata.socrata.com/Social-Services/311-Noise-Complaints/y6w7-733v" target="_blank"><img class="link-small" src="assets/plus.svg"></a></p>
       <img id="decor19" src="assets/decor3.png"/>
     </div>
 
@@ -283,7 +286,7 @@
       <div class="recs" id="rec2">
         <div class="rec-para">
           <p class="rec-subtitle">Restructure Info Flows</p>
-          <p>There is an extremely large amount of information being collected by these organizations aiming to decrease noise pollution; However, this information is not widely shared. Rearrange who has access to the information in order to combat noise pollution (Based on Donna Meadow’s Nine Leverage Points). </p>
+          <p>There is an extremely large amount of information being collected by these organizations aiming to decrease noise pollution; However, this information is not widely shared. Rearrange who has access to the information in order to combat noise pollution (Based on Donna Meadow’s Nine Leverage Points) <a href="https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/" target="_blank"><img class="link-small" src="assets/plus.svg"></a>.</p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
@@ -304,7 +307,8 @@
       <div class="recs" id="rec5">
         <div class="rec-para">
           <p class="rec-subtitle">Example</p>
-          <p>The article, “The Future of Smart Cities with AI and Smart Noise Management Systems” speculates that by using IoT technology and artificial intelligence, individuals can be directly notified of noise disturbances. In the case of an individual, when they file a noise complaint, they would immediately see if others in their area have filed a noise complaint. This could create the opportunity of local/community problem solving amongst neighbors.</p>
+          <p>The article, “The Future of Smart Cities with AI and Smart Noise Management Systems” speculates that by using IoT technology and artificial intelligence, individuals can be directly notified of noise disturbances. In the case of an individual, when they file a noise complaint, they would immediately see if others in their area have filed a noise complaint. This could create the opportunity of local/community problem solving amongst neighbors <a href="https://ts2.space/en/the-future-of-smart-cities-with-ai-and-smart-noise-
+management-systems/" target="_blank"><img class="link-small" src="assets/plus.svg"></a></p>
         </div>
         <img class="rec-img" src="assets/nyc.jpeg"/>
       </div>
@@ -318,7 +322,7 @@
     </div>
 
     <!-- DIV 16 -->
-    <div class="full-page">
+    <div class="full-page" id="web-mockup">
       <p id="mockup-text">PLATFORM MOCK UP</p>
       <div class="sound-container"></div>
       <img class="mockup" id="mp1" src="assets/mockup1.png"/>
@@ -326,7 +330,7 @@
     </div>
 
     <!-- DIV 17 -->
-    <div class="full-page">
+    <div class="full-page" id="web-conclusion">
       <img id="decor20" src="assets/decor2.png"/>
       <div id="conclusion">
         <p id="conclusion-title">Conclusion</p>
@@ -335,7 +339,7 @@
     </div>
 
     <!-- DIV 18 -->
-    <div class="full-page" style="height: 210vh;">
+    <div class="full-page" style="height: 210vh;" id="web-bibli">
       <img id="decor21" src="assets/decor1.png"/>
       <img id="decor22" src="assets/biblio-decor.png"/>
       <div id="biblo">
@@ -397,27 +401,25 @@
   var items = {
   web: [
     { name: "Introduction", id: "web-intro" },
-    { name: "Noise effects on the population", id: "web-effect" },
-    {
-      name: "Case Study: Positives and Negatives of New York City’s Noise",
-      id: "web-nyc"
-    },
-    { name: "Existing Noise Regulation Systems", id: "web-regulation" },
-    { name: "Recommendations", id: "web-recom" },
+    { name: "Noise effects on the NYC population", id: "web-effect" },
+    { name: "Negative Impacts of Noise", id: "web-pos" },
+    { name: "Positive Impacts of Noise", id: "web-neg" },
+    { name: "Reccomendations", id: "web-recom" },
+    { name: "Platform Mockup", id: "web-mockup" },
     { name: "Conclusion", id: "web-conclusion" },
     { name: "Bibliography", id: "web-bibli" }
   ],
-  paper: [
-    { name: "Intro", id: "paper-intro" },
-    { name: "Noise effect", id: "paper-effect" },
-    { name: "Case Study", id: "paper-nyc" },
-    { name: "Negative", id: "paper-neg" },
-    { name: "Positive", id: "paper-pos" },
-    { name: "Recommendation", id: "paper-recom" },
-    { name: "Mock-ups", id: "paper-mock" },
-    { name: "Conclusion", id: "paper-conclusion" },
-    { name: "Bibliography", id: "paper-bibli" }
-  ]
+  // paper: [
+  //   { name: "Intro", id: "paper-intro" },
+  //   { name: "Noise effect", id: "paper-effect" },
+  //   { name: "Case Study", id: "paper-nyc" },
+  //   { name: "Negative", id: "paper-neg" },
+  //   { name: "Positive", id: "paper-pos" },
+  //   { name: "Recommendation", id: "paper-recom" },
+  //   { name: "Mock-ups", id: "paper-mock" },
+  //   { name: "Conclusion", id: "paper-conclusion" },
+  //   { name: "Bibliography", id: "paper-bibli" }
+  // ]
 };
 
 function showItems(category) {

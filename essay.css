@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=M+PLUS+Code+Latin:wght@400;600&display=swap');
+
+#container{
+padding: 10%;
+padding-left: 20%;
+padding-right: 20%;
+font-family: 'M PLUS Code Latin';
+}
+
+h1{
+text-align: center;
+text-decoration: underline;
+}
+
+h3{
+text-align: center;
+text-decoration: underline;
+}
+
+p{
+font-family: 'Inter';
+line-height: 30px;
+}
+
+#biblio{
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.dec{
+position: absolute;
+left: 0px;
+width: 15%;
+transform: translateY(10px);
+}
+
+#toEssay{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 9999;
+  font-family: 'Inter';
+  font-size: 10px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+}
+
+#toEssay img{
+  position: absolute;
+  width: 150px;
+  margin-top: 20px;
+}
+
+#toEssay img:hover{
+  filter: invert(1);
+  color: black;
+}
+
+#curve{
+  position: absolute;
+  transform: translateX(-13.5%) translateY(-18%);
+   fill: transparent;
+}
+
+a:visitied{
+  text-decoration: none;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 400px;
+  height: 100vh;
+  background-image: url('assets/glitch-dark.png');
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  transition: left 0.5s ease;
+  text-decoration: none;
+  padding-top: 10px;
+  z-index: 99999;
+  color: white;
+}
+.menu.visible {
+  left: 0;
+}
+.menu-categories {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  font-family: 'M PLUS Code Latin';
+  font-weight: 900;
+}
+.menu-category {
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.menu-items {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  width: 80%;
+  font-family: 'Inter';
+}
+.menu-item {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+  border: 1px solid white;
+  width: 100%;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.menu-item:hover{
+  background-color: white;
+  width: 100%;
+  color: black;
+}
+.menu-button {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  width: 150px;
+  height: 50px;
+  z-index: 9999;
+  font-family: 'Inter';
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+  padding-top: 22px;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 500px;
+  background-color: white;
+}
+.content-section {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+#webpage{
+  height: 40%;
+  color: white;
+}
+
+#webpage:hover{
+  color: black;
+  background-color: white;
+}
+
+#researchessay{
+  height: 60%;
+  color: white;
+}
+
+#researchessay:hover{
+  color: black;
+  background-color: white;
+}
