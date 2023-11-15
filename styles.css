@@ -1,28 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=M+PLUS+Code+Latin:wght@400;600&display=swap');
 
 @font-face {
-    font-family: 'AntKiller';
-    src: url('assets/antkiller-font/Antkiller-9MKj.ttf') format('truetype');
+	font-family: 'AntKiller';
+	src: url('assets/antkiller-font/Antkiller-9MKj.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Noise';
-    src: url('assets/sd-noise-font/SdnoisedemoRegular-ALKGL.ttf') format('truetype');
+	font-family: 'Noise';
+	src: url('assets/sd-noise-font/SdnoisedemoRegular-ALKGL.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Musical';
-    src: url('assets/musical-tone-font/MusicalTone-7BJ4A.otf') format('truetype');
+	font-family: 'Musical';
+	src: url('assets/musical-tone-font/MusicalTone-7BJ4A.otf') format('truetype');
 }
 
 @font-face {
-    font-family: 'SDGlitch';
-    src: url('assets/sd-glitch-2-font/SdglitchdemoRegular-YzROj.ttf') format('truetype');
+	font-family: 'SDGlitch';
+	src: url('assets/sd-glitch-2-font/SdglitchdemoRegular-YzROj.ttf') format('truetype');
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
+body,
+html {
+	margin: 0;
+	padding: 0;
+
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
 }
 
 /*p{
@@ -31,7 +35,7 @@ body, html {
 */
 /*DIV 1*/
 
-#toEssay{
+#toEssay {
 	display: none;
 	position: fixed;
 	bottom: 0;
@@ -46,89 +50,96 @@ body, html {
 	margin: 10px;
 }
 
-#toEssay img{
+#toEssay img {
 	position: absolute;
 	width: 150px;
 	margin-top: 20px;
 }
 
-#toEssay img:hover{
+#toEssay img:hover {
 	filter: invert(1);
 	color: black;
 }
 
 
-#curve{
+#curve {
 	position: absolute;
 	transform: translateX(-13.5%) translateY(-18%);
- 	 fill: transparent;
+	fill: transparent;
 }
 
 /*MENU*/
 
-a{
+a {
 	text-decoration: none;
 }
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: -400px;
-  width: 400px;
-  height: 100vh;
-  background-image: url('assets/glitch-dark.png');
-  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: start;
-  transition: left 0.5s ease;
-  text-decoration: none;
-  padding-top: 10px;
-  z-index: 99999;
-  color: white;
+	position: fixed;
+	top: 0;
+	left: -400px;
+	width: 400px;
+	height: 100vh;
+	background-image: url('assets/glitch-dark.png');
+	box-shadow: 4px 0 8px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: start;
+	transition: left 0.5s ease;
+	text-decoration: none;
+	padding-top: 10px;
+	z-index: 99999;
+	color: white;
 }
+
 .menu.visible {
-  left: 0;
+	left: 0;
 }
+
 .menu-categories {
-  display: flex;
-  align-items: flex-start;
-  padding: 10px;
-  font-family: 'M PLUS Code Latin';
-  font-weight: 900;
-  width: 80%;
+	display: flex;
+	align-items: flex-start;
+	padding: 10px;
+	font-family: 'M PLUS Code Latin';
+	font-weight: 900;
+	width: 80%;
 }
+
 .menu-category {
-  font-size: 24px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  margin-right: 20px;
-  padding: 10px;
-  width: 80%;
+	font-size: 24px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	padding: 10px;
+	width: 80%;
 }
+
 .menu-items {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px;
-  width: 80%;
-  font-family: 'Inter';
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 10px;
+	width: 80%;
+	font-family: 'Inter';
 }
+
 .menu-item {
-  font-size: 18px;
-  cursor: pointer;
-  padding: 5px;
-  color: white;
-  border: 1px solid white;
-  width: 100%;
-  margin-bottom: 20px;
-  text-decoration: none;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 5px;
+	color: white;
+	border: 1px solid white;
+	width: 100%;
+	margin-bottom: 20px;
+	text-decoration: none;
 }
-.menu-item:hover{
+
+.menu-item:hover {
 	background-color: white;
 	width: 100%;
 	color: black;
 }
+
 .menu-button {
 	display: none;
 	position: fixed;
@@ -148,27 +159,28 @@ a{
 	border-radius: 500px;
 	background-color: white;
 }
+
 .content-section {
-  margin-left: 220px;
-  padding: 20px;
+	margin-left: 220px;
+	padding: 20px;
 }
 
-#webpage{
+#webpage {
 	height: 40%;
 	color: white;
 }
 
-#webpage:hover{
+#webpage:hover {
 	color: black;
 	background-color: white;
 }
 
-#researchessay{
+#researchessay {
 	height: 60%;
 	color: white;
 }
 
-#researchessay:hover{
+#researchessay:hover {
 	color: black;
 	background-color: white;
 }
@@ -177,25 +189,25 @@ a{
 
 .full-page {
 	position: relative;
-    width: 100vw;
-    height: 100vh;
-    border: 1px solid transparent;
-    margin: 0px;
-    background-color: white;
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid transparent;
+	margin: 0px;
+	background-color: white;
 }
 
 .noiseoverlay {
-    margin: 0;
-    position: fixed;
-    z-index: 30;
-    height: 100vh;
-    width: 100vw;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 9999;
+	margin: 0;
+	position: fixed;
+	z-index: 30;
+	height: 100vh;
+	width: 100vw;
+	mix-blend-mode: overlay;
+	pointer-events: none;
+	z-index: 9999;
 }
 
-#intro{
+#intro {
 	width: 400px;
 	height: 400px;
 	margin: auto;
@@ -204,38 +216,38 @@ a{
 	background-image: url('assets/intro.png');
 	background-size: cover;
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
-#main-title{
+#main-title {
 	text-align: center;
 	font-family: 'Noise', sans-serif;
 	font-size: 130px;
 	color: white;
 }
 
-#cacaphony{
+#cacaphony {
 	display: inline-block;
-    background: linear-gradient(to right, black 37%, white 30%, white 70%, white 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: 'Noise', sans-serif;
-    transform: translateX(-150px);
+	background: linear-gradient(to right, black 37%, white 30%, white 70%, white 70%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-family: 'Noise', sans-serif;
+	transform: translateX(-150px);
 }
 
-#symphony{
+#symphony {
 	display: inline-block;
 	background: linear-gradient(to right, white 61%, black 30%, black 70%, black 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: 'Noise', sans-serif;
-    transform: translateX(160px);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	font-family: 'Noise', sans-serif;
+	transform: translateX(160px);
 }
 
-.centered-text{
+.centered-text {
 	width: 480px;
 	text-align: center;
 	margin: auto;
@@ -244,7 +256,7 @@ a{
 	font-size: 15px;
 }
 
-#arrow{
+#arrow {
 	position: absolute;
 	width: 40px;
 	margin-top: 50px;
@@ -255,7 +267,7 @@ a{
 
 /*DIV 2*/
 
-#background-stripe{
+#background-stripe {
 	position: absolute;
 	width: 100vw;
 	height: 150px;
@@ -263,10 +275,10 @@ a{
 	z-index: 1;
 }
 
-.sound-container{
+.sound-container {
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 	background-image: url('assets/glitch2.jpeg');
 	width: 100vw;
 	height: 175px;
@@ -275,7 +287,7 @@ a{
 	z-index: 10;
 }
 
-.sound-container div{
+.sound-container div {
 	width: 175px;
 	height: 250px;
 	border: 1px solid;
@@ -284,29 +296,29 @@ a{
 	margin-left: 60px;
 	margin-right: 60px;
 	font-family: 'Inter';
-	font-weight: 300; 
+	font-weight: 300;
 }
 
-.sound-container div:hover{
+.sound-container div:hover {
 	font-weight: 700;
 }
 
-#sound1{
+#sound1 {
 	background-image: url('assets/coffee.png');
 	background-size: cover;
 }
 
-#sound2{
+#sound2 {
 	background-image: url('assets/traffic.png');
 	background-size: cover;
 }
 
-#sound3{
+#sound3 {
 	background-image: url('assets/construction.png');
 	background-size: cover;
 }
 
-.audio-icon{
+.audio-icon {
 	width: 60px;
 	margin: auto;
 	margin-top: 30px;
@@ -317,7 +329,7 @@ a{
 	opacity: 80%;
 }
 
-.sound-container p{
+.sound-container p {
 	text-align: center;
 	margin: 13px;
 	margin-top: 50%;
@@ -326,7 +338,7 @@ a{
 
 /* DIV 3 */
 
-.centered-subtitle{
+.centered-subtitle {
 	font-family: 'M PLUS Code Latin';
 	font-size: 60px;
 	font-weight: 900;
@@ -334,31 +346,31 @@ a{
 }
 
 .overlapping-container {
-    width: 100vw;
+	width: 100vw;
 }
 
 .overlapping-images {
-    display: block;
-    width: 500px;
-    margin: auto;
-    text-align: center;
-    position: relative;
+	display: block;
+	width: 500px;
+	margin: auto;
+	text-align: center;
+	position: relative;
 }
 
 .overlapping-images img {
-    width: 350px;
-    height: 210px;
+	width: 350px;
+	height: 210px;
 }
 
 .overlapping-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	z-index: 1;
 }
 
-.overlapping-text p{
+.overlapping-text p {
 	width: 200px;
 	background-color: white;
 	padding: 30px;
@@ -367,29 +379,29 @@ a{
 	font-size: 14px;
 }
 
-.left-img{
+.left-img {
 	transform: translateX(-250px);
 }
 
-.right-img{
+.right-img {
 	transform: translateX(250px);
 }
 
-.left-text{
+.left-text {
 	transform: translateX(-250px);
 }
 
-.right-text{
+.right-text {
 	transform: translateX(250px);
 }
 
-.decor1{
+.decor1 {
 	position: absolute;
 	width: 175px;
 	bottom: 0px;
 }
 
-.decor2{
+.decor2 {
 	position: absolute;
 	width: 295px;
 	height: 480px;
@@ -397,7 +409,7 @@ a{
 	right: 0px;
 }
 
-.arrow{
+.arrow {
 	position: absolute;
 	width: 100px;
 	height: 120px;
@@ -407,40 +419,40 @@ a{
 	z-index: 999;
 }
 
-.arrow:hover{
+.arrow:hover {
 	filter: invert(1);
 }
 
 /*DIV 4*/
 
 .outer-container {
-    width: 800px;
-    height: 400px;
-    margin: auto;
-    margin-top: 10%;
-    display: flex;
+	width: 800px;
+	height: 400px;
+	margin: auto;
+	margin-top: 10%;
+	display: flex;
 }
 
 .inner-div {
-    flex: 1;
-/*    border: 1px solid #000;*/
-    padding: 0px;
+	flex: 1;
+	/*    border: 1px solid #000;*/
+	padding: 0px;
 }
 
-.outer-container p{
+.outer-container p {
 	font-family: 'M PLUS Code Latin';
 	font-size: 60px;
 	font-weight: 900;
 	text-align: center;
 }
 
-#casestudy{
+#casestudy {
 	float: right;
 	margin-right: 5px;
 	margin-bottom: 20px;
 }
 
-#nyc-text{
+#nyc-text {
 	position: absolute;
 	width: 300px;
 	float: left;
@@ -451,14 +463,14 @@ a{
 	z-index: 30;
 }
 
-#decor3{
+#decor3 {
 	width: 300px;
 	z-index: -10;
 	float: right;
 	margin: 0px;
 }
 
-#nyc{
+#nyc {
 	position: absolute;
 	width: 400px;
 	height: 500px;
@@ -467,7 +479,7 @@ a{
 	z-index: 10;
 }
 
-#decor-box1{
+#decor-box1 {
 	position: absolute;
 	width: 500px;
 	height: 400px;
@@ -477,21 +489,21 @@ a{
 	z-index: 20;
 }
 
-#decor4{
+#decor4 {
 	position: absolute;
 	width: 200px;
 	height: 100px;
 	left: 150px;
 }
 
-#decor5{
+#decor5 {
 	position: absolute;
 	width: 250px;
 	height: 50px;
 	bottom: 0px;
 }
 
-#decor6{
+#decor6 {
 	position: absolute;
 	width: 400px;
 	height: 250px;
@@ -503,15 +515,15 @@ a{
 /* DIV 5 */
 
 .fade-in-text {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .fade-in-text.fade-in {
-    opacity: 1;
+	opacity: 1;
 }
 
-.centered-text2{
+.centered-text2 {
 	width: 520px;
 	text-align: center;
 	margin: auto;
@@ -524,14 +536,14 @@ a{
 
 /* DIV 6  */
 
-#negative-screen{
+#negative-screen {
 	position: absolute;
 	z-index: 20;
 	width: 69.85%;
 	height: 60%;
 }
 
-#negative-title{
+#negative-title {
 	position: absolute;
 	z-index: 30;
 	color: white;
@@ -544,50 +556,52 @@ a{
 	bottom: 0px;
 }
 
-.negative-sticky{
+.negative-sticky {
 	opacity: 0;
 	position: fixed;
 	height: 100vh;
 	width: 10%;
-    top: 0%;
-    right: 0%;
-    z-index: 999;
-    pointer-events: none;
-    background-color: white;
+	top: 0%;
+	right: 0%;
+	z-index: 999;
+	pointer-events: none;
+	background-color: white;
 }
 
 .negative-sticky p {
-    transform: rotate(90deg);
-    width: 500px;
-    margin: 0px;
-    text-align: center;
-    transform-origin: left bottom; /* Adjust the rotation origin */
-    white-space: nowrap; /* Prevent text from wrapping */
-    font-family: "Noise";
-    font-size: 150px;
-    pointer-events: none;
+	transform: rotate(90deg);
+	width: 500px;
+	margin: 0px;
+	text-align: center;
+	transform-origin: left bottom;
+	/* Adjust the rotation origin */
+	white-space: nowrap;
+	/* Prevent text from wrapping */
+	font-family: "Noise";
+	font-size: 150px;
+	pointer-events: none;
 }
 
-#negative-decor{
+#negative-decor {
 	position: absolute;
 	width: 200px;
 	bottom: 0px;
 }
 
-#negative-title p{
+#negative-title p {
 	margin: 0px;
 	margin-top: 25px;
 	margin-right: 5px;
 }
 
-#main-negative-title{
+#main-negative-title {
 	float: right;
 	text-align: right;
 	font-size: 100px;
 	font-family: 'Noise', sans-serif;
 }
 
-#main-negative-subtitle{
+#main-negative-subtitle {
 	float: right;
 	font-family: 'Inter', sans-serif;
 	color: black;
@@ -595,7 +609,7 @@ a{
 
 /* DIV 7 */
 
-#negative-subtitle-cont{
+#negative-subtitle-cont {
 	position: absolute;
 	z-index: 30;
 	color: white;
@@ -608,7 +622,7 @@ a{
 	top: 0px;
 }
 
-#impact1{
+#impact1 {
 	position: absolute;
 	width: 100%;
 	margin: 0px;
@@ -622,38 +636,38 @@ a{
 	background-color: white;
 }
 
-#impact1 p{
+#impact1 p {
 	margin: 40px;
 	font-weight: 400;
 }
 
-#impact-info{
+#impact-info {
 	font-family: 'Inter';
 	font-size: 16px;
 }
 
-#decor7{
+#decor7 {
 	position: absolute;
 	width: 30.2%;
-	bottom:0px;
+	bottom: 0px;
 	right: 0px;
 }
 
-#decor8{
+#decor8 {
 	position: absolute;
 	width: 20%;
-	top:0px;
+	top: 0px;
 	left: 0px;
 }
 
-#decor9{
+#decor9 {
 	position: absolute;
 	width: 69.8%;
-	bottom:0px;
+	bottom: 0px;
 	left: 0px;
 }
 
-.two-impacts{
+.two-impacts {
 	position: absolute;
 	z-index: 30;
 	display: flex;
@@ -663,7 +677,7 @@ a{
 	font-size: 23px;
 }
 
-#impact2{
+#impact2 {
 	background-color: white;
 	border: 1px solid;
 	width: 300px;
@@ -672,7 +686,7 @@ a{
 	padding: 15px;
 }
 
-#impact3{
+#impact3 {
 	background-color: white;
 	border: 1px solid;
 	width: 300px;
@@ -683,7 +697,7 @@ a{
 
 /* DIV 8 */
 
-#decor10{
+#decor10 {
 	position: absolute;
 	width: 69.8%;
 	height: 100%;
@@ -692,14 +706,14 @@ a{
 }
 
 
-#impact4{
+#impact4 {
 	position: absolute;
 	color: black;
 	text-align: center;
 	font-family: 'M PLUS Code Latin';
 	font-size: 23px;
 	background-color: white;
-	right:30.2%;
+	right: 30.2%;
 	top: 15%;
 	border: 1px solid;
 	width: 500px;
@@ -708,7 +722,7 @@ a{
 	padding: 30px;
 }
 
-#impact5{
+#impact5 {
 	position: absolute;
 	color: black;
 	text-align: center;
@@ -723,7 +737,7 @@ a{
 	padding: 15px;
 }
 
-#decor11{
+#decor11 {
 	position: absolute;
 	width: 30%;
 	right: 0px;
@@ -732,7 +746,7 @@ a{
 
 /* DIV 9 */
 
-#negative-graph{
+#negative-graph {
 	position: absolute;
 	width: 40%;
 	height: 70%;
@@ -743,7 +757,7 @@ a{
 	text-align: center;
 }
 
-#decor12{
+#decor12 {
 	position: absolute;
 	width: 300px;
 	height: 100px;
@@ -753,38 +767,40 @@ a{
 
 /* DIV 10 */
 
-.positive-sticky{
+.positive-sticky {
 	opacity: 0;
 	position: fixed;
-	height:90vh;
+	height: 90vh;
 	width: 10%;
-    bottom: 19%;
-    left: 12%;
-    z-index: 999;
-    pointer-events: none;
+	bottom: 19%;
+	left: 12%;
+	z-index: 999;
+	pointer-events: none;
 }
 
 .positive-sticky p {
-    transform: rotate(270deg) translateX(-100%);
-    width: 500px;
-    margin: 0px;
-    text-align: center;
-    transform-origin: left bottom; /* Adjust the rotation origin */
-    white-space: nowrap; /* Prevent text from wrapping */
-    font-family: "Noise";
-    font-size: 150px;
-    pointer-events: none;
+	transform: rotate(270deg) translateX(-100%);
+	width: 500px;
+	margin: 0px;
+	text-align: center;
+	transform-origin: left bottom;
+	/* Adjust the rotation origin */
+	white-space: nowrap;
+	/* Prevent text from wrapping */
+	font-family: "Noise";
+	font-size: 150px;
+	pointer-events: none;
 }
 
 
-#positive-decor{
+#positive-decor {
 	position: absolute;
 	transform: translateX(-100%);
 	width: 200px;
 	bottom: 0px;
 }
 
-#positive-screen{
+#positive-screen {
 	position: absolute;
 	z-index: 20;
 	width: 70.3%;
@@ -793,7 +809,7 @@ a{
 	transform: translateY(-2px);
 }
 
-#positive-title{
+#positive-title {
 	position: absolute;
 	z-index: 30;
 	color: white;
@@ -806,27 +822,27 @@ a{
 	bottom: 0px;
 }
 
-#positive-title p{
+#positive-title p {
 	margin: 0px;
 	margin-top: 25px;
 	margin-right: 5px;
 	margin-left: 10px;
 }
 
-#main-positive-title{
+#main-positive-title {
 	float: right;
 	text-align: left;
 	font-size: 100px;
 	font-family: 'Noise', sans-serif;
 }
 
-#main-positive-subtitle{
+#main-positive-subtitle {
 	float: left;
 	font-family: 'Inter', sans-serif;
 	color: black;
 }
 
-#decor13{
+#decor13 {
 	position: absolute;
 	width: 29.7%;
 	bottom: 0px;
@@ -835,7 +851,7 @@ a{
 
 /* DIV 11 */
 
-#decor14{
+#decor14 {
 	position: absolute;
 	width: 60%;
 	height: 60%;
@@ -844,7 +860,7 @@ a{
 	z-index: -10;
 }
 
-#positive-subtitle-cont{
+#positive-subtitle-cont {
 	position: absolute;
 	z-index: -10;
 	color: white;
@@ -857,7 +873,7 @@ a{
 	top: 0px;
 }
 
-#impact6{
+#impact6 {
 	position: absolute;
 	width: 50%;
 	margin: 0px;
@@ -872,11 +888,11 @@ a{
 	background-color: white;
 }
 
-#impact6 p{
+#impact6 p {
 	margin: 25px;
 }
 
-#impact7{
+#impact7 {
 	position: absolute;
 	width: 50%;
 	margin: 0px;
@@ -892,29 +908,29 @@ a{
 	background-color: white;
 }
 
-#impact7 p{
+#impact7 p {
 	margin-left: 45px;
 	margin-right: 45px;
 }
 
-#decor15{
+#decor15 {
 	position: absolute;
 	width: 250px;
-	top:0px;
+	top: 0px;
 	right: 20%;
 }
 
 
-#decor16{
+#decor16 {
 	position: absolute;
 	width: 250px;
-	bottom:0px;
+	bottom: 0px;
 	left: 0%;
 }
 
 /*DIV 12*/
 
-#positive-graph{
+#positive-graph {
 	position: absolute;
 	width: 80%;
 	height: 20%;
@@ -930,7 +946,7 @@ a{
 	z-index: 0;
 }
 
-.p-graph{
+.p-graph {
 	width: 300px;
 	height: 300px;
 	background-color: white;
@@ -938,7 +954,7 @@ a{
 	margin-left: 50px;
 }
 
-.p-img{
+.p-img {
 	position: absolute;
 	width: 300px;
 	height: 300px;
@@ -946,16 +962,16 @@ a{
 	opacity: 10%;
 }
 
-.p-img:hover{
+.p-img:hover {
 	opacity: 100%;
 }
 
-.small{
+.small {
 	font-weight: 200;
 	font-size: 12px;
 }
 
-.p-graph-title{
+.p-graph-title {
 	position: absolute;
 	width: 250px;
 	font-family: 'M PLUS Code Latin';
@@ -966,7 +982,7 @@ a{
 	font-weight: 600;
 }
 
-#decor17{
+#decor17 {
 	position: absolute;
 	width: 425px;
 	bottom: 0px;
@@ -975,38 +991,40 @@ a{
 
 /* DIV 13 */
 
-.recs-sticky{
+.recs-sticky {
 	opacity: 0;
 	position: fixed;
 	height: 100vh;
 	width: 10%;
-    top: 0%;
-    right: 0%;
-    z-index: 999;
-    pointer-events: none;
-    background-color: white;
+	top: 0%;
+	right: 0%;
+	z-index: 999;
+	pointer-events: none;
+	background-color: white;
 }
 
 .recs-sticky p {
-    transform: rotate(90deg);
-    width: 500px;
-    margin: 0px;
-    margin-top: -20%;
-    text-align: center;
-    transform-origin: left bottom; /* Adjust the rotation origin */
-    white-space: nowrap; /* Prevent text from wrapping */
-    font-family: "Noise";
-    font-size: 100px;
-    pointer-events: none;
+	transform: rotate(90deg);
+	width: 500px;
+	margin: 0px;
+	margin-top: -20%;
+	text-align: center;
+	transform-origin: left bottom;
+	/* Adjust the rotation origin */
+	white-space: nowrap;
+	/* Prevent text from wrapping */
+	font-family: "Noise";
+	font-size: 100px;
+	pointer-events: none;
 }
 
-#recs-decor{
+#recs-decor {
 	position: absolute;
 	width: 200px;
 	bottom: 0px;
 }
 
-#decor18{
+#decor18 {
 	position: absolute;
 	width: 40%;
 	height: 100%;
@@ -1014,25 +1032,25 @@ a{
 	rotate: 180deg;
 }
 
-#rec-title-div{
+#rec-title-div {
 	width: 60%;
 	height: 60%;
 	display: flex;
 	margin: auto;
 	margin-top: 10%;
-    justify-content: center;
-    align-items: end;
-    border: 1px solid;
+	justify-content: center;
+	align-items: end;
+	border: 1px solid;
 }
 
-#rec-img{
+#rec-img {
 	position: absolute;
 	width: 35%;
 	left: 20%;
 	transform: translateX(-12%);
 }
 
-#rec-title{
+#rec-title {
 	position: absolute;
 	top: 18%;
 	font-family: 'M PLUS Code Latin';
@@ -1044,7 +1062,7 @@ a{
     color: transparent;*/
 }
 
-#rec-text{
+#rec-text {
 	position: absolute;
 	width: 25%;
 	transform: translateX(56%);
@@ -1055,7 +1073,7 @@ a{
 }
 
 
-.rec-back-container{
+.rec-back-container {
 	position: absolute;
 	width: 20%;
 	height: 400vh;
@@ -1064,7 +1082,7 @@ a{
 	transform: translateX(250%);
 }
 
-.recs{
+.recs {
 	width: 50%;
 	height: 400px;
 	border: 1px solid;
@@ -1078,19 +1096,19 @@ a{
 	z-index: 100;
 }
 
-.rec-para{
+.rec-para {
 	width: 40%;
 	transform: translateX(10%);
 	font-family: 'Inter';
 }
 
-.rec-subtitle{
+.rec-subtitle {
 	font-family: 'M PLUS Code Latin';
 	font-size: 20px;
 	text-decoration: underline;
 }
 
-.rec-img{
+.rec-img {
 	position: relative;
 	transform: translateX(70px);
 	width: 50%;
@@ -1100,12 +1118,12 @@ a{
 /*REC GRAPH*/
 
 #my-svg {
-    width: 700px;
-    height: 600px;
-    cursor: pointer;
+	width: 700px;
+	height: 600px;
+	cursor: pointer;
 }
 
-#rec-graph-title{
+#rec-graph-title {
 	font-family: 'M PLUS Code Latin';
 	font-size: 50px;
 	font-weight: 900;
@@ -1114,18 +1132,18 @@ a{
 	margin-bottom: 5px;
 }
 
-#rec-graph{
+#rec-graph {
 	position: absolute;
 	transform: translateX(57%);
 	margin-top: 3%;
 }
 
-#rec-graph-subtitle-main{
+#rec-graph-subtitle-main {
 	font-family: 'M PLUS Code Latin';
 	font-size: 30px;
 }
 
-#rec-graph-subtitle{
+#rec-graph-subtitle {
 	position: absolute;
 	width: 200px;
 	text-align: right;
@@ -1134,14 +1152,14 @@ a{
 	font-family: 'Inter';
 }
 
-#decor18{
+#decor18 {
 	position: absolute;
 	width: 450px;
 	height: 150px;
 	top: 0px;
 }
 
-#decor19{
+#decor19 {
 	position: absolute;
 	width: 340px;
 	height: 150px;
@@ -1149,7 +1167,7 @@ a{
 	right: 0px;
 }
 
-#mockup-text{
+#mockup-text {
 	position: absolute;
 	font-family: 'M PLUS Code Latin';
 	font-weight: 900;
@@ -1158,22 +1176,22 @@ a{
 	right: 10%;
 }
 
-.mockup{
+.mockup {
 	position: absolute;
 	width: 250px;
 }
 
-#mp1{
+#mp1 {
 	top: 7%;
 	left: 15%;
 }
 
-#mp2{
+#mp2 {
 	top: 30%;
 	right: 45%;
 }
 
-#conclusion{
+#conclusion {
 	width: 500px;
 	text-align: center;
 	margin: auto;
@@ -1185,19 +1203,19 @@ a{
 	background-color: white;
 }
 
-#conclusion-title{
+#conclusion-title {
 	font-family: 'M PLUS Code Latin';
 	font-weight: 900;
 	font-size: 50px;
 }
 
 
-#conclusion-text{
+#conclusion-text {
 	font-family: 'Inter';
 	font-size: 20px;
 }
 
-#decor20{
+#decor20 {
 	position: absolute;
 	width: 250px;
 	top: 10%;
@@ -1205,7 +1223,7 @@ a{
 	z-index: -30;
 }
 
-#biblo{
+#biblo {
 	position: absolute;
 	width: 50%;
 	height: 170vh;
@@ -1214,30 +1232,30 @@ a{
 	right: 15%;
 }
 
-#decor22{
+#decor22 {
 	position: absolute;
 	width: 21%;
 	top: 30%;
 }
 
-#b-title{
+#b-title {
 	float: right;
 	font-family: 'M PLUS Code Latin';
 	font-weight: 900;
 	font-size: 50px;
 }
 
-#b-text{
+#b-text {
 	float: inline-end;
 }
 
-#decor21{
+#decor21 {
 	position: absolute;
 	right: 0px;
 	width: 15%;
 }
 
-.footer-container{
+.footer-container {
 	background-image: url("assets/footer.png");
 	width: 100vw;
 	height: 100px;
@@ -1249,50 +1267,50 @@ a{
 }
 
 
-.firstlink{
-	width:75px;
+.firstlink {
+	width: 75px;
 	position: absolute;
 	left: 47%;
 	top: 30%;
 	z-index: 100;
 }
 
-.firstlink:hover{
+.firstlink:hover {
 	transform: rotate(180deg);
 }
 
 
-.link{
-	width:75px;
+.link {
+	width: 75px;
 	position: absolute;
 	z-index: 100;
 }
 
-.link:hover{
+.link:hover {
 	transform: rotate(180deg);
 }
 
-.link-small{
-	width:15px;
+.link-small {
+	width: 15px;
 	transform: translateY(3px);
 }
 
-.link-small:hover{
+.link-small:hover {
 	transform: rotate(180deg);
 }
 
 
-#report{
+#report {
 	display: flex;
 	align-items: center;
 }
 
-#report img{
+#report img {
 	width: 70px;
 	margin-left: 15px
 }
 
-#report div{
+#report div {
 	position: absolute;
 	right: 0px;
 	top: 0px;
@@ -1302,7 +1320,7 @@ a{
 	border-right: none;
 }
 
-#rtext{
+#rtext {
 	margin: 14px;
 	margin-top: 10%;
 	text-align: center;
@@ -1311,12 +1329,8 @@ a{
 	font-family: 'Inter';
 }
 
-#report-link{
+#report-link {
 	position: absolute;
 	bottom: 25px;
 	left: 30%;
 }
-
-
-
-
