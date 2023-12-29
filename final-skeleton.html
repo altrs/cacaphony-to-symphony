@@ -40,8 +40,8 @@
 
     <div class="menu-button">Open Menu</div>
       <div class="menu">
-        <div class="menu-categories">
-          <a href="final-skeleton.html"><div class="menu-category" id="webpage" onmouseover="showItems('web')">WEBPAGE</div></a>
+        <div class="menu-categories" onmouseover="showItems('web')">
+          <a href="final-skeleton.html"><div class="menu-category" id="webpage">WEBPAGE</div></a>
           <!-- <a href="essay.html"><div class="menu-category" id="researchessay" onmouseover="showItems('paper')">RESEARCH ESSAY</div></a> -->
         </div>
         <div class="menu-items" id="menuItems">
@@ -396,10 +396,8 @@ management-systems/" target="_blank"><img class="link-small" src="assets/plus.sv
 <script>
 
   $(document).ready(function() {
-    // Set default text
     var defaultText = $("#rtext").text();
 
-    // Change text on hover
     $("#report img").hover(function() {
       var newText = $(this).data("text");
       $("#rtext").text(newText).fadeIn();
@@ -505,7 +503,6 @@ document.addEventListener("click", function (event) {
     );
 }
 
-// Function to handle scroll events
 function handleScroll() {
     var lines = document.querySelectorAll('.fade-in-text');
     var negativeSticky = document.querySelector('.negative-sticky');
@@ -555,10 +552,8 @@ function handleScroll() {
     }
 }
 
-// Add scroll event listener
 window.addEventListener('scroll', handleScroll);
 
-// Initial check on page load
 handleScroll();
 
 function changeText() {
@@ -595,13 +590,10 @@ function changeText() {
       }
     ];
 
-    // Get the current text state index
     var currentIndex = textStates.findIndex(state => state.middle === middleText.innerText);
 
-    // Calculate the next index, and loop back to the beginning if needed
     var nextIndex = (currentIndex + 1) % textStates.length;
 
-    // Update the text for each <p> tag and the subtitle
     subtitle.innerHTML = textStates[nextIndex].subtitle;
     leftText.innerText = textStates[nextIndex].left;
     middleText.innerText = textStates[nextIndex].middle;
@@ -621,29 +613,24 @@ function changeText() {
 
         let svg = d3.select("#my-svg");
 
-        // Draw service request points with hover tooltips
         svg.append('g').selectAll('path')
           .data(bb.features)
           .join('path')
           .attr('d', geoGenerator)
           .attr('fill', '#00000030')
-          .append('title') // Add title element for hover tooltip
+          .append('title')
           .text(function (d) {
-              // Check if the properties exist before accessing them
-              var descriptor = d.properties.Descriptor || 'N/A'; // Use 'Descriptor' instead of 'descriptor' if needed
-              var createdDate = d.properties['Created Date'] || 'N/A'; // Use 'Created Date' with brackets for the property with a space
-
+              var descriptor = d.properties.Descriptor || 'N/A';
+              var createdDate = d.properties['Created Date'] || 'N/A';
               return `Descriptor: ${descriptor}\nCreated Date: ${createdDate}`;
           });
 
-        // Define the target point (100, 100)
         var targetX = 120;
         var targetY = 125;
 
-        // Create an arrowhead marker
         svg.append('defs').append('marker')
             .attr('id', 'arrowhead')
-            .attr('refX', 6)  // Adjust this value for arrowhead size
+            .attr('refX', 6)
             .attr('refY', 2)
             .attr('markerWidth', 6)
             .attr('markerHeight', 4)
@@ -651,14 +638,12 @@ function changeText() {
             .append('path')
             .attr('d', 'M 0,0 V 4 L6,2 Z');
 
-        // Function to draw arrows with a drawing effect
         function drawArrowsWithEffect(index) {
             if (index < bb.features.length) {
                 var feature = bb.features[index];
                 var sourceX = projection(feature.geometry.coordinates)[0];
                 var sourceY = projection(feature.geometry.coordinates)[1];
 
-                // Create a path element with a line element inside
                 var path = svg.append("path")
                     .attr("d", `M${sourceX},${sourceY} L${sourceX},${sourceY}`)
                     .style("fill", "none")
@@ -666,14 +651,11 @@ function changeText() {
                     .style("stroke-width", 1)
                     .attr("marker-end", "url(#arrowhead)");
 
-                // Use transition to simulate the drawing effect
                 path.transition()
-                    .duration(100)  // Adjust the duration as needed
+                    .duration(100)
                     .attr("d", `M${sourceX},${sourceY} L${targetX},${targetY}`)
                     .on("end", function () {
-                        // Remove the old line with the arrowhead
                         path.remove();
-                        // Create a new line without an arrowhead
                         svg.append("line")
                             .attr("x1", sourceX)
                             .attr("y1", sourceY)
@@ -682,13 +664,11 @@ function changeText() {
                             .style("fill", "none")
                             .style("stroke", "#000000")
                             .style("stroke-width", 0.5);
-                        // Continue with the next arrow
                         drawArrowsWithEffect(index + 1);
                     });
             }
         }
 
-        // Function to check if the SVG is in the viewport
         function isElementInViewport(el) {
             var rect = el.getBoundingClientRect();
             return (
@@ -699,7 +679,6 @@ function changeText() {
             );
         }
 
-        // Function to handle scroll events
         function handleScroll() {
             if (isElementInViewport(svg.node())) {
                 drawArrowsWithEffect(0);
