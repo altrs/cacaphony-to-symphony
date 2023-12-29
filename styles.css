@@ -1192,7 +1192,7 @@ a {
 }
 
 #conclusion {
-	width: 500px;
+	width: 700px;
 	text-align: center;
 	margin: auto;
 	border: 1px solid;
@@ -1212,7 +1212,7 @@ a {
 
 #conclusion-text {
 	font-family: 'Inter';
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #decor20 {
